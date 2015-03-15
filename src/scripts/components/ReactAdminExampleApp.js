@@ -3,10 +3,6 @@
 var React = require('react/addons');
 var ReactTransitionGroup = React.addons.TransitionGroup;
 
-// CSS
-require('normalize.css/normalize.css');
-require('../../styles/main.css');
-
 var imageURL = require('../../images/yeoman.png');
 
 var ReactAdminExampleApp = React.createClass({

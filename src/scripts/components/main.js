@@ -1,5 +1,10 @@
 'use strict';
 
+require('console-polyfill');
+// CSS
+require('normalize.css/normalize.css');
+require('../../styles/main.css');
+
 var ReactAdminExampleApp = require('./ReactAdminExampleApp');
 var React = require('react');
 var Router = require('react-router');
