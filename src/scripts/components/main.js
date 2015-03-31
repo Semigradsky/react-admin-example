@@ -2,7 +2,7 @@
 
 require('console-polyfill');
 // CSS
-require('normalize.css/normalize.css');
+require('normalize.css');
 require('../../styles/main.css');
 
 var ReactAdminExampleApp = require('./ReactAdminExampleApp');
