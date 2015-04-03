@@ -3,7 +3,7 @@
 var React = require('react');
 var Router = require('react-router');
 
-var auth = require('../../services/auth');
+var auth = require('services/auth');
 
 var Login = React.createClass({
   mixins: [ Router.Navigation ],

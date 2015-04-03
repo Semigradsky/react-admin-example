@@ -5,9 +5,9 @@ var ReactTransitionGroup = React.addons.TransitionGroup;
 var Router = require('react-router');
 var { RouteHandler, Link } = Router;
 
-var auth = require('../services/auth');
+var auth = require('services/auth');
 
-var imageURL = require('../../images/yeoman.png');
+var imageURL = require('images/yeoman.png');
 
 var ReactAdminExampleApp = React.createClass({
   getInitialState: function () {

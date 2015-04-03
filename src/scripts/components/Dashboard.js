@@ -2,8 +2,8 @@
 
 var React = require('React');
 
-var auth = require('../services/auth');
-var Authentication = require('../mixins/Authentication');
+var auth = require('services/auth');
+var Authentication = require('mixins/Authentication');
 
 var Dashboard = React.createClass({
   mixins: [ Authentication ],

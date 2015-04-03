@@ -28,10 +28,14 @@ module.exports = {
   },
 
   resolve: {
+    root: __dirname,
     extensions: ['', '.js'],
     alias: {
-      'styles': '../../../src/styles',
-      'components': '../../../src/scripts/components/'
+      'styles': 'src/styles',
+      'images': 'src/images',
+      'components': 'src/scripts/components/',
+      'mixins': 'src/scripts/mixins',
+      'services': 'src/scripts/services'
     }
   },
   module: {

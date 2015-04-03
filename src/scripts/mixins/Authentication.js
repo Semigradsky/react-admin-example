@@ -1,7 +1,7 @@
 'use strict';
 
-var auth = require('../services/auth');
-var Login = require('../components/auth/Login');
+var auth = require('services/auth');
+var Login = require('components/auth/Login');
 
 var Authentication = {
   statics: {

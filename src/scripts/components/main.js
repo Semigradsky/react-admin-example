@@ -3,7 +3,7 @@
 require('console-polyfill');
 // CSS
 require('normalize.css');
-require('../../styles/main.css');
+require('styles/main.css');
 
 var ReactAdminExampleApp = require('./ReactAdminExampleApp');
 var Logout = require('./auth/Logout');
