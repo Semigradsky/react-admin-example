@@ -1,51 +1,39 @@
 var React = require('react');
-var Reactable = require('reactable');
+var Griddle = require('griddle-react');
 
-var Table = Reactable.Table;
-var Tr = Reactable.Tr;
-var Td = Reactable.Td;
-
-var defaultSort = { column: 'Name', direction: 'desc' };
-
-var columns = [
-  'Image',
-  'Name',
-  'Birthday',
-  { key: 'Options', label: '' }
+var users = [
+  {
+    id: 1,
+    firstName: 'Allah',
+    lastName: 'Akbar',
+    ageBirth: new Date(Date.parse('1/1/1990')).toISOString(),
+    img: 'https://avatars1.githubusercontent.com/u/1198848?v=3&s=460'
+  },
+  {
+    id: 2,
+    firstName: 'Dmitry',
+    lastName: 'Semigradsky',
+    ageBirth: new Date(Date.parse('9/3/1990')).toISOString(),
+    img: 'https://avatars1.githubusercontent.com/u/1198848?v=3&s=460'
+  },
+  {
+    id: 3,
+    firstName: 'B',
+    lastName: 'C',
+    ageBirth: new Date(Date.parse('3/10/1995')).toISOString(),
+    img: 'https://avatars1.githubusercontent.com/u/1198848?v=3&s=460'
+  }
 ];
 
 var UserList = React.createClass({
+
   render: function () {
-    var rows = this.props.users.map(function (x) {
-      var name = x.firstName + ' ' + x.lastName;
-      return (
-        <Tr key={x.id}>
-          <Td column='Image'>
-            <img src={x.img} alt={name} />
-          </Td>
-          <Td column='Name'>
-            {name}
-          </Td>
-          <Td column='Birthday'>
-            {x.ageBirth}
-          </Td>
-          <Td column='Options'>
-            {x.id}
-          </Td>
-        </Tr>
-      )
-    });
-    
     return (
-      <Table 
-        sortable={['Name', 'Birthday']}
-        defaultSort={defaultSort}
-        columns={columns}>
-        {rows}
-      </Table>
+      <Griddle
+        results={users}/>
     );
   }
-  
+
 });
 
 module.exports = UserList;
