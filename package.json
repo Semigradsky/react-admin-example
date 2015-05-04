@@ -1,8 +1,11 @@
 {
-  "name": "adminapp",
-  "version": "0.0.0",
-  "description": "",
-  "repository": "",
+  "name": "react-admin-example",
+  "version": "0.0.1",
+  "description": "React Admin Panel Example",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semigradsky/react-admin-example.git"
+  },
   "private": true,
   "src": "src",
   "test": "test",
