@@ -1,0 +1,51 @@
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.nav > li {
+  position: relative;
+  display: block;
+}
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+  text-decoration: none;
+  background-color: #EEE;
+}
+
+.navbar {
+  border: 1px solid #E7E7E7;
+  z-index: 1000;
+  position: relative;
+  min-height: 50px;
+  background-color: #F8F8F8;
+}
+
+.navbar-header {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  color: #777;
+}
+
+.navbar-links {
+  float: right;
+}
+
+.sidebar {
+  z-index: 1;
+  position: absolute;
+  width: 250px;
+  margin-top: 50px;
+}
+.side-menu .side-menu-item {
+  border-bottom: 1px solid #E7E7E7;
+}
+.side-menu .side-menu-item.active {
+  background-color: #EEE;
+}

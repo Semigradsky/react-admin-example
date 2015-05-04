@@ -1,49 +1,49 @@
-/* Stiziles */
-
-html, body {
-  background: #222222;
+* {
+  box-sizing: border-box;
 }
 
-/* main */
-
-.main {
-  width: 100%;
+html {
   height: 100%;
-  background: #222222;
-  color: #fff;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-.main img {
-  width: 103px;
-  height: 89px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-/* transitions */
-
-.fade-enter {
-  opacity: 0.01;
-  transition: opacity .5s ease-in;
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-}
-
-.fade-leave {
-  opacity: 1;
-  transition: opacity .5s ease-in;
-}
-
-.fade-leave.fade-leave-active {
-  opacity: 0.01;
-}
-
-input {
-  color: #000;
+body {
+  height: 100%;
+  background-color: #F8F8F8;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
 }
 
 a {
-  color: #fcf;
+  color: #337AB7;
+  text-decoration: none;
 }
+
+a:focus, a:hover {
+  color: #23527C;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+#content {
+  width: 100%;
+}
+
+#page-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: 0 0 0 250px;
+  padding: 50px 30px;
+  border-left: 1px solid #E7E7E7;
+  background-color: #FFF;
+}
+
+@import 'navbar.css';

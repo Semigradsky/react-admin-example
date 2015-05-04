@@ -6,6 +6,8 @@
  */
 'use strict';
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer-core');
+var atImport = require("postcss-import")
 
 module.exports = {
 
@@ -38,6 +40,7 @@ module.exports = {
       'services': 'src/scripts/services'
     }
   },
+
   module: {
     preLoaders: [{
       test: /\.js$/,
@@ -49,16 +52,15 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'react-hot!jsx-loader?harmony'
     }, {
-      test: /\.less/,
-      loader: 'style-loader!css-loader!less-loader'
-    }, {
-      test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      test:   /\.css$/,
+      loader: 'style-loader!css-loader!postcss-loader'
     }, {
       test: /\.(png|jpg)$/,
       loader: 'url-loader?limit=8192'
     }]
   },
+
+  postcss: [ atImport, autoprefixer({ browsers: ['last 1 version', '> 2%'] }) ],
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

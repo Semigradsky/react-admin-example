@@ -5,6 +5,8 @@ var ReactTransitionGroup = React.addons.TransitionGroup;
 var Router = require('react-router');
 var { RouteHandler, Link } = Router;
 
+var Navbar = require('components/Navbar');
+
 var auth = require('services/auth');
 
 var imageURL = require('images/yeoman.png');
@@ -33,18 +35,21 @@ var ReactAdminExampleApp = React.createClass({
       <Link to="login">Sign in</Link>;
 
     return (
-      <div className='main'>
-        <ReactTransitionGroup transitionName="fade">
-          <img src={imageURL} />
-        </ReactTransitionGroup>
-        <div>
-          <ul>
-            <li>{loginOrOut}</li>
-            <li><Link to="about">About</Link></li>
-            <li><Link to="dashboard">Dashboard</Link> (authenticated)</li>
-          </ul>
+      <div id="content">
+        <Navbar />
+        <div id="page-content">
+          <ReactTransitionGroup transitionName="fade">
+            <img src={imageURL} />
+          </ReactTransitionGroup>
+          <div>
+            <ul>
+              <li>{loginOrOut}</li>
+              <li><Link to="about">About</Link></li>
+              <li><Link to="dashboard">Dashboard</Link> (authenticated)</li>
+            </ul>
+          </div>
+          <RouteHandler/>
         </div>
-        <RouteHandler/>
       </div>
     );
   }
