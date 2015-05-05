@@ -7,7 +7,6 @@
 'use strict';
 var webpack = require('webpack');
 var cssnext = require('cssnext');
-var atImport = require('postcss-import');
 var cssgrace = require('cssgrace');
 
 module.exports = {
@@ -43,11 +42,6 @@ module.exports = {
   },
 
   module: {
-    preLoaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'jsxhint'
-    }],
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
@@ -62,7 +56,6 @@ module.exports = {
   },
 
   postcss: [
-    atImport,
     cssnext({
       browsers: ['last 1 version', '> 2%']
     }),
