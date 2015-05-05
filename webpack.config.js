@@ -6,8 +6,9 @@
  */
 'use strict';
 var webpack = require('webpack');
-var autoprefixer = require('autoprefixer-core');
-var atImport = require("postcss-import")
+var cssnext = require('cssnext');
+var atImport = require('postcss-import');
+var cssgrace = require('cssgrace');
 
 module.exports = {
 
@@ -60,7 +61,13 @@ module.exports = {
     }]
   },
 
-  postcss: [ atImport, autoprefixer({ browsers: ['last 1 version', '> 2%'] }) ],
+  postcss: [
+    atImport,
+    cssnext({
+      browsers: ['last 1 version', '> 2%']
+    }),
+    cssgrace
+  ],
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

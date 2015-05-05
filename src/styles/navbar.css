@@ -14,20 +14,20 @@
 }
 .nav > li > a:focus, .nav > li > a:hover {
   text-decoration: none;
-  background-color: #EEE;
+  background-color: var(--navbarActiveItemBgColor);
 }
 
 .navbar {
-  border: 1px solid #E7E7E7;
+  border: 1px solid var(--mainBorderColor);
   z-index: 1000;
   position: relative;
-  min-height: 50px;
-  background-color: #F8F8F8;
+  height: var(--navbarHeight);
+  background-color: var(--navbarBgColor);
 }
 
 .navbar-header {
   float: left;
-  height: 50px;
+  height: var(--navbarHeight);
   padding: 15px 15px;
   font-size: 18px;
   color: #777;
@@ -40,12 +40,12 @@
 .sidebar {
   z-index: 1;
   position: absolute;
-  width: 250px;
-  margin-top: 50px;
+  width: var(--sidebarWidth);
+  margin-top: var(--navbarHeight);
 }
 .side-menu .side-menu-item {
-  border-bottom: 1px solid #E7E7E7;
+  border-bottom: 1px solid var(--mainBorderColor);
 }
 .side-menu .side-menu-item.active {
-  background-color: #EEE;
+  background-color: var(--navbarActiveItemBgColor);
 }

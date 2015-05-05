@@ -20,8 +20,9 @@
     "react-router": "^0.13.3"
   },
   "devDependencies": {
-    "autoprefixer-core": "^5.1.11",
     "css-loader": "^0.12.0",
+    "cssgrace": "^2.0.2",
+    "cssnext": "^1.4.0",
     "faker": "^2.1.2",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
@@ -41,6 +42,7 @@
     "karma-script-launcher": "^0.1.0",
     "karma-webpack": "^1.5.0",
     "load-grunt-tasks": "^3.1.0",
+    "postcss": "^4.1.8",
     "postcss-import": "^5.2.2",
     "postcss-loader": "^0.4.2",
     "react-hot-loader": "^1.0.7",

@@ -1,0 +1,17 @@
+:root {
+  /* Links */
+  --linkColor: #337AB7;
+  --linkHoverColor: #23527C;
+
+  /* Main */
+  --mainBorderColor: #E7E7E7;
+  --mainTextColor: #333;
+  --mainFontFamily: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mainFontSize: 14px;
+
+  /* Navbar */
+  --navbarHeight: 50px;
+  --navbarBgColor: #F8F8F8;
+  --navbarActiveItemBgColor: #EEE;
+  --sidebarWidth: 250px;
+}
