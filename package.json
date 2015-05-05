@@ -12,14 +12,22 @@
   "dist": "dist",
   "mainInput": "main",
   "mainOutput": "main",
+  "scripts": {
+    "init": "node src/data/generate.js",
+    "server": "json-server src/data/db.json"
+  },
   "dependencies": {
     "console-polyfill": "^0.2.1",
     "griddle-react": "^0.2.12",
+    "json-server": "^0.7.3",
     "normalize.css": "^3.0.3",
     "react": "~0.13.2",
-    "react-router": "^0.13.3"
+    "react-router": "^0.13.3",
+    "superagent": "^1.2.0"
   },
   "devDependencies": {
+    "babel-core": "^5.2.15",
+    "babel-loader": "^5.0.0",
     "css-loader": "^0.12.0",
     "cssgrace": "^2.0.2",
     "cssnext": "^1.4.0",

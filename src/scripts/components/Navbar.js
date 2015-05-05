@@ -1,9 +1,9 @@
 'use strict';
 
-var React = require('React');
+const React = require('react');
 
-var Navbar = React.createClass({
-  render: function () {
+const Navbar = React.createClass({
+  render() {
     return (
       <nav className="navbar" role="navigation">
         <div className="navbar-header">

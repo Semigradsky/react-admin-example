@@ -1,15 +1,15 @@
 'use strict';
 
-var React = require('react');
+const React = require('react');
 
-var auth = require('services/auth');
+const auth = require('services/auth');
 
-var Logout = React.createClass({
-  componentDidMount: function () {
+const Logout = React.createClass({
+  componentDidMount() {
     auth.logout();
   },
 
-  render: function () {
+  render() {
     return <p>You are now logged out</p>;
   }
 });

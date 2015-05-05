@@ -1,36 +1,33 @@
-var React = require('react');
-var Griddle = require('griddle-react');
+'use strict';
 
-var users = [
-  {
-    id: 1,
-    firstName: 'Allah',
-    lastName: 'Akbar',
-    ageBirth: new Date(Date.parse('1/1/1990')).toISOString(),
-    img: 'https://avatars1.githubusercontent.com/u/1198848?v=3&s=460'
+const React = require('react');
+const Griddle = require('griddle-react');
+
+const users = require('services/users');
+
+const UserList = React.createClass({
+  getInitialStatefunction() {
+    return {
+      users: []
+    };
   },
-  {
-    id: 2,
-    firstName: 'Dmitry',
-    lastName: 'Semigradsky',
-    ageBirth: new Date(Date.parse('9/3/1990')).toISOString(),
-    img: 'https://avatars1.githubusercontent.com/u/1198848?v=3&s=460'
+
+  componentDidMount() {
+    users.getAll((data) => {
+      if (this.isMounted()) {
+        this.setState({
+          users: data
+        });
+      }
+    });
   },
-  {
-    id: 3,
-    firstName: 'B',
-    lastName: 'C',
-    ageBirth: new Date(Date.parse('3/10/1995')).toISOString(),
-    img: 'https://avatars1.githubusercontent.com/u/1198848?v=3&s=460'
-  }
-];
 
-var UserList = React.createClass({
-
-  render: function () {
+  render() {
     return (
       <Griddle
-        results={users}/>
+        results={this.state.users}
+        columns={['name', 'login', 'email', 'birthday']}
+      />
     );
   }
 

@@ -1,16 +1,16 @@
 'use strict';
 
-var React = require('React');
+const React = require('react');
 
-var auth = require('services/auth');
-var Authentication = require('mixins/Authentication');
+const auth = require('services/auth');
+const Authentication = require('mixins/Authentication');
 
-var UsersList = require('components/users/List');
+const UsersList = require('components/users/List');
 
-var Dashboard = React.createClass({
+const Dashboard = React.createClass({
   mixins: [ Authentication ],
 
-  render: function () {
+  render() {
     var token = auth.getToken();
     return (
       <div>

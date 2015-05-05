@@ -1,35 +1,35 @@
 'use strict';
 
-var React = require('react/addons');
-var ReactTransitionGroup = React.addons.TransitionGroup;
-var Router = require('react-router');
-var { RouteHandler, Link } = Router;
+const React = require('react/addons');
+const ReactTransitionGroup = React.addons.TransitionGroup;
+const Router = require('react-router');
+const { RouteHandler, Link } = Router;
 
-var Navbar = require('components/Navbar');
+const Navbar = require('components/Navbar');
 
-var auth = require('services/auth');
+const auth = require('services/auth');
 
-var imageURL = require('images/yeoman.png');
+const imageURL = require('images/yeoman.png');
 
-var ReactAdminExampleApp = React.createClass({
-  getInitialState: function () {
+const ReactAdminExampleApp = React.createClass({
+  getInitialState() {
     return {
       loggedIn: auth.loggedIn()
     };
   },
 
-  setStateOnAuth: function (loggedIn) {
+  setStateOnAuth(loggedIn) {
     this.setState({
       loggedIn: loggedIn
     });
   },
 
-  componentWillMount: function () {
+  componentWillMount() {
     auth.onChange = this.setStateOnAuth;
     auth.login();
   },
 
-  render: function() {
+  render() {
     var loginOrOut = this.state.loggedIn ?
       <Link to="logout">Log out</Link> :
       <Link to="login">Sign in</Link>;

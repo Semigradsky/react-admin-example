@@ -4,7 +4,7 @@
 'use strict';
 
 function pretendRequest(email, pass, cb) {
-  setTimeout(function () {
+  setTimeout(() => {
     if (email === 'joe@example.com' && pass === 'password1') {
       cb({
         authenticated: true,
@@ -17,7 +17,7 @@ function pretendRequest(email, pass, cb) {
 }
 
 var auth = {
-  login: function (email, pass, cb) {
+  login(email, pass, cb) {
     cb = arguments[arguments.length - 1];
 
     if (localStorage.token) {
@@ -26,7 +26,7 @@ var auth = {
       return;
     }
 
-    pretendRequest(email, pass, function (res) {
+    pretendRequest(email, pass, (res) => {
       if (res.authenticated) {
         localStorage.token = res.token;
         cb && cb(true);
@@ -35,24 +35,24 @@ var auth = {
         cb && cb(false);
         this.onChange(false);
       }
-    }.bind(this));
+    });
   },
 
-  getToken: function () {
+  getToken() {
     return localStorage.token;
   },
 
-  logout: function (cb) {
+  logout(cb) {
     delete localStorage.token;
     cb && cb();
     this.onChange(false);
   },
 
-  loggedIn: function () {
+  loggedIn() {
     return !!localStorage.token;
   },
 
-  onChange: function () {}
+  onChange() {}
 };
 
 module.exports = auth;

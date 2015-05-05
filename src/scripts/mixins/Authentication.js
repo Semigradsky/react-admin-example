@@ -1,11 +1,11 @@
 'use strict';
 
-var auth = require('services/auth');
-var Login = require('components/auth/Login');
+const auth = require('services/auth');
+const Login = require('components/auth/Login');
 
-var Authentication = {
+const Authentication = {
   statics: {
-    willTransitionTo: function (transition) {
+    willTransitionTo(transition) {
       if (!auth.loggedIn()) {
         Login.attemptedTransition = transition;
         transition.redirect('/login');

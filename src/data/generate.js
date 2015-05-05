@@ -2,12 +2,24 @@ var fs = require('fs');
 var path = require('path');
 var faker= require('faker');
 
-var bigSet = [];
+var users = [];
+var countUsers = 2000;
 
-for(i = 200; i > 0; i--){
-  bigSet.push(faker.helpers.userCard());
+for(i = countUsers; i > 0; i--){
+  users.push(generateUserProfile());
 };
 
-fs.writeFile(path.resolve(__dirname, './users.json'), JSON.stringify(bigSet), function() {
+fs.writeFile(path.resolve(__dirname, 'db.json'), JSON.stringify({ users: users }), function() {
   console.log('data set generated successfully!');
 });
+
+function generateUserProfile() {
+  return {
+    name: faker.name.findName(),
+    login: faker.internet.userName(),
+    email: faker.internet.email(),
+    city: faker.address.city(),
+    country: faker.address.country(),
+    birthday: faker.date.between(new Date(1940, 1, 1), new Date())
+  };
+}

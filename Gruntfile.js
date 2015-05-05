@@ -1,5 +1,7 @@
 'use strict';
 
+var exec = require('child_process').exec;
+
 var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
 };
@@ -107,9 +109,12 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('serve', function (target) {
+  grunt.registerTask('serve', { timeout: 1000, }, function (target) {
+    exec('npm run server');
+
     if (target === 'dist') {
-      return grunt.task.run(['build', 'open:dist', 'connect:dist']);
+      grunt.task.run(['build', 'open:dist', 'connect:dist']);
+      return;
     }
 
     grunt.task.run([

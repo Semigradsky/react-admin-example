@@ -1,23 +1,25 @@
 'use strict';
 
+const request = require('superagent');
+
 require('console-polyfill');
 // CSS
 require('normalize.css');
 require('styles/main.css');
 
-var React = require('react');
-var Router = require('react-router');
-var { Route, RouteHandler } = Router;
+const React = require('react');
+const Router = require('react-router');
+const { Route, RouteHandler } = Router;
 
-var App = require('components/App');
-var Logout = require('components/auth/Logout');
-var Login = require('components/auth/Login');
-var About = require('components/About');
-var Dashboard = require('components/Dashboard');
+const App = require('components/App');
+const Logout = require('components/auth/Logout');
+const Login = require('components/auth/Login');
+const About = require('components/About');
+const Dashboard = require('components/Dashboard');
 
-var content = document.getElementsByTagName('body')[0];
+const content = document.getElementsByTagName('body')[0];
 
-var Routes = (
+const Routes = (
   <Route handler={App}>
     <Route name="login" handler={Login}/>
     <Route name="logout" handler={Logout}/>
@@ -26,6 +28,6 @@ var Routes = (
   </Route>
 );
 
-Router.run(Routes, function (Handler) {
+Router.run(Routes, (Handler) => {
   React.render(<Handler/>, content);
 });
