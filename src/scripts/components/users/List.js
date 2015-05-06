@@ -3,10 +3,13 @@
 const React = require('react');
 const Griddle = require('griddle-react');
 
+const Authentication = require('mixins/Authentication');
 const users = require('services/users');
 
 const UserList = React.createClass({
-  getInitialStatefunction() {
+  mixins: [ Authentication ],
+
+  getInitialState() {
     return {
       users: []
     };
@@ -24,10 +27,13 @@ const UserList = React.createClass({
 
   render() {
     return (
-      <Griddle
-        results={this.state.users}
-        columns={['name', 'login', 'email', 'birthday']}
-      />
+      <div>
+        <h1>Users</h1>
+        <Griddle
+          results={this.state.users}
+          columns={['name', 'login', 'email', 'birthday']}
+        />
+      </div>
     );
   }
 

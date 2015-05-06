@@ -2,10 +2,12 @@
 
 const React = require('react');
 
+const Sidebar = require('components/Sidebar');
+
 const Navbar = React.createClass({
   render() {
     return (
-      <nav className="navbar" role="navigation">
+      <nav className="navbar">
         <div className="navbar-header">
           Admin Panel
         </div>
@@ -13,17 +15,7 @@ const Navbar = React.createClass({
         <div className="navbar-links">
         </div>
 
-        <div className="sidebar" role="navigation">
-          <ul className="nav side-menu">
-            <li className="side-menu-item">
-              <a href="/#/Dashboard" className="active">Dashboard</a>
-            </li>
-            <li className="side-menu-item">
-              <a href="/#/Users">Users</a>
-            </li>
-          </ul>
-        </div>
-
+        <Sidebar />
       </nav>
     );
   }

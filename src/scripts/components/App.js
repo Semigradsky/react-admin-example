@@ -1,7 +1,6 @@
 'use strict';
 
 const React = require('react/addons');
-const ReactTransitionGroup = React.addons.TransitionGroup;
 const Router = require('react-router');
 const { RouteHandler, Link } = Router;
 
@@ -38,9 +37,7 @@ const ReactAdminExampleApp = React.createClass({
       <div id="content">
         <Navbar />
         <div id="page-content">
-          <ReactTransitionGroup transitionName="fade">
-            <img src={imageURL} />
-          </ReactTransitionGroup>
+          <img src={imageURL} />
           <div>
             <ul>
               <li>{loginOrOut}</li>

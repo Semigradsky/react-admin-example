@@ -16,6 +16,7 @@ const Logout = require('components/auth/Logout');
 const Login = require('components/auth/Login');
 const About = require('components/About');
 const Dashboard = require('components/Dashboard');
+const Users = require('components/users/List');
 
 const content = document.getElementsByTagName('body')[0];
 
@@ -25,6 +26,7 @@ const Routes = (
     <Route name="logout" handler={Logout}/>
     <Route name="about" handler={About}/>
     <Route name="dashboard" handler={Dashboard}/>
+    <Route name="users" handler={Users}/>
   </Route>
 );
 
