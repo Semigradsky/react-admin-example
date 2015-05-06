@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "console-polyfill": "^0.2.1",
+    "fecha": "^0.2.1",
     "griddle-react": "^0.2.12",
     "json-server": "^0.7.3",
     "normalize.css": "^3.0.3",

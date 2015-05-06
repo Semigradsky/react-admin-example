@@ -1,9 +1,17 @@
 React Admin Panel Example
 ===
 
+## Development
+
+Type `npm run init` for generate fake db data.
+
+Type `grunt serve` for start developing.
+
+
 ## Dependencies [![Dependency Status](https://david-dm.org/semigradsky/react-admin-example.svg)](https://david-dm.org/semigradsky/react-admin-example)
 
 - [console-polyfill](https://github.com/paulmillr/console-polyfill) - Browser console methods polyfill
+- [fecha](https://github.com/taylorhakes/fecha) - Date formatting and parsing
 - [griddle-react](https://github.com/GriddleGriddle/Griddle) - Simple Grid Component written in React
 - [json-server](https://github.com/typicode/json-server) - a full fake REST API with zero coding
 - [normalize.css](https://github.com/necolas/normalize.css) - A collection of HTML element and attribute style-normalizations
@@ -36,9 +44,3 @@ React Admin Panel Example
 - PostCSS plugins:
   - [cssgrace](https://github.com/cssdream/cssgrace) - Adds IE hacks, missing properties, repairs common errors, etc.
   - [cssnext](https://github.com/cssnext/cssnext) - Adds variables, custom selectors, custom media queries, automatic vendor prefixes, inline @import rules, etc.
-
-## Development
-
-Type `npm run init` for generate fake db data.
-
-Type `grunt serve` for start developing.

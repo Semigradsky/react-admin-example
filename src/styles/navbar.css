@@ -12,9 +12,16 @@
   display: block;
   padding: 10px 15px;
 }
-.nav > li > a:focus, .nav > li > a:hover {
+
+.nav > li > a:focus,
+.nav > li > a:hover,
+.nav > li > a.active {
   text-decoration: none;
   background-color: var(--navbarActiveItemBgColor);
+}
+
+.nav > li > a.active {
+  font-weight: bold;
 }
 
 .navbar {
@@ -45,7 +52,4 @@
 }
 .side-menu .side-menu-item {
   border-bottom: 1px solid var(--mainBorderColor);
-}
-.side-menu .side-menu-item.active {
-  background-color: var(--navbarActiveItemBgColor);
 }

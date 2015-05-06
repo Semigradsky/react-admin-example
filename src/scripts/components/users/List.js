@@ -1,10 +1,18 @@
 'use strict';
 
 const React = require('react');
-const Griddle = require('griddle-react');
 
-const Authentication = require('mixins/Authentication');
 const users = require('services/users');
+const Authentication = require('mixins/Authentication');
+const Grid = require('components/grid/Grid');
+const DateDisplay = require('components/grid/DateDisplay');
+
+const metadata = [
+  { columnName: 'name', displayName: 'Name' },
+  { columnName: 'login', displayName: 'Login' },
+  { columnName: 'email', displayName: 'E-mail' },
+  { columnName: 'birthday', displayName: 'Birthday', customComponent: DateDisplay, cssClassName: 'birthday' }
+];
 
 const UserList = React.createClass({
   mixins: [ Authentication ],
@@ -29,9 +37,14 @@ const UserList = React.createClass({
     return (
       <div>
         <h1>Users</h1>
-        <Griddle
-          results={this.state.users}
+        <Grid
+          data={this.state.users}
           columns={['name', 'login', 'email', 'birthday']}
+          columnMetadata={metadata}
+          className="users-list"
+          resultsPerPage={20}
+          initialSort="name"
+          initialSortAscending={true}
         />
       </div>
     );
