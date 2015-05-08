@@ -35,13 +35,17 @@
 .navbar-header {
   float: left;
   height: var(--navbarHeight);
-  padding: 15px 15px;
+  padding: var(--mainLeftPadding);
   font-size: 18px;
   color: #777;
 }
 
 .navbar-links {
   float: right;
+  padding: var(--mainLeftPadding);
+}
+.navbar-links .link-text {
+  margin-left: 4px;
 }
 
 .sidebar {

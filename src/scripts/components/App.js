@@ -1,16 +1,16 @@
 'use strict';
 
-const React = require('react/addons');
-const Router = require('react-router');
-const { RouteHandler, Link } = Router;
+const React = require('react');
+const { Navigation, RouteHandler } = require('react-router');
 
-const Navbar = require('components/Navbar');
+const Navbar = require('components/navbar/Navbar');
+const PageFooter = require('components/PageFooter');
 
 const auth = require('services/auth');
 
-const imageURL = require('images/yeoman.png');
+const App = React.createClass({
+  mixins: [Navigation],
 
-const ReactAdminExampleApp = React.createClass({
   getInitialState() {
     return {
       loggedIn: auth.loggedIn()
@@ -21,6 +21,7 @@ const ReactAdminExampleApp = React.createClass({
     this.setState({
       loggedIn: loggedIn
     });
+    this.transitionTo(loggedIn ? 'dashboard' : 'login');
   },
 
   componentWillMount() {
@@ -29,27 +30,18 @@ const ReactAdminExampleApp = React.createClass({
   },
 
   render() {
-    var loginOrOut = this.state.loggedIn ?
-      <Link to="logout">Log out</Link> :
-      <Link to="login">Sign in</Link>;
+    var auth = this.state.loggedIn;
 
     return (
       <div id="content">
-        <Navbar />
-        <div id="page-content">
-          <img src={imageURL} />
-          <div>
-            <ul>
-              <li>{loginOrOut}</li>
-              <li><Link to="about">About</Link></li>
-              <li><Link to="dashboard">Dashboard</Link> (authenticated)</li>
-            </ul>
-          </div>
-          <RouteHandler/>
+        <Navbar auth={auth} />
+        <div id="page-content" className={auth ? 'auth' : ''}>
+          <RouteHandler />
         </div>
+        <PageFooter />
       </div>
     );
   }
 });
 
-module.exports = ReactAdminExampleApp;
+module.exports = App;

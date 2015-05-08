@@ -3,9 +3,10 @@
 const request = require('superagent');
 
 require('console-polyfill');
-// CSS
+
 require('normalize.css');
 require('styles/main.css');
+require('font-awesome/css/font-awesome.css');
 
 const React = require('react');
 const Router = require('react-router');

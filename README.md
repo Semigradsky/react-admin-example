@@ -12,6 +12,7 @@ Type `grunt serve` for start developing.
 
 - [console-polyfill](https://github.com/paulmillr/console-polyfill) - Browser console methods polyfill
 - [fecha](https://github.com/taylorhakes/fecha) - Date formatting and parsing
+- [font-awesome](https://github.com/FortAwesome/Font-Awesome) - The iconic font and CSS toolkit
 - [griddle-react](https://github.com/GriddleGriddle/Griddle) - Simple Grid Component written in React
 - [json-server](https://github.com/typicode/json-server) - a full fake REST API with zero coding
 - [normalize.css](https://github.com/necolas/normalize.css) - A collection of HTML element and attribute style-normalizations
@@ -36,6 +37,7 @@ Type `grunt serve` for start developing.
 - webpack loaders:
   - [babel-loader](https://github.com/babel/babel-loader) - Turn ES6 code into vanilla ES5 with no runtime required using [babel](https://github.com/babel/babel)
   - [css-loader](https://github.com/webpack/css-loader) - css loader module for webpack
+  - [file-loader](https://github.com/webpack/file-loader) - file loader for webpack
   - [jsx-loader](https://github.com/petehunt/jsx-loader) - JSX loader for webpack
   - [react-hot-loader](https://github.com/gaearon/react-hot-loader) - Tweak React components in real time
   - [style-loader](https://github.com/webpack/style-loader) - style loader module for webpack

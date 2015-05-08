@@ -42,17 +42,25 @@ module.exports = {
   },
 
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader!react-hot!jsx-loader?harmony'
-    }, {
-      test:   /\.css$/,
-      loader: 'style-loader!css-loader!postcss-loader'
-    }, {
-      test: /\.(png|jpg)$/,
-      loader: 'url-loader?limit=8192'
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader!react-hot!jsx-loader?harmony'
+      }, {
+        test:   /\.css$/,
+        loader: 'style-loader!css-loader!postcss-loader'
+      }, {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192'
+      }, {
+        test: /\.(ttf|eot|svg)/,
+        loader: 'file-loader'
+      }, {
+        test: /\.woff(2)?/,
+        loader: 'url-loader?limit=10000&minetype=application/font-woff'
+      }
+   ]
   },
 
   postcss: [

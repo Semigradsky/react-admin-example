@@ -1,0 +1,16 @@
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: var(--mainLeftPadding);
+  background-color: var(--footerBgColor);
+  heigth: var(--footerHeight);
+  line-height: var(--footerHeight);
+  font-size: var(--footerFontSize);
+  border: 1px solid var(--mainBorderColor);
+}
+
+.page-footer .about {
+  padding-left: var(--mainLeftPadding);
+}
