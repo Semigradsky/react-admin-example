@@ -7,6 +7,8 @@
 'use strict';
 
 var webpack = require('webpack');
+var cssnext = require('cssnext');
+var cssgrace = require('cssgrace');
 
 module.exports = {
 
@@ -17,7 +19,7 @@ module.exports = {
   },
 
   debug: false,
-  devtool: false,
+  devtool: 'source-map',
   entry: './src/scripts/main.js',
 
   stats: {
@@ -48,16 +50,27 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'jsx-loader?harmony'
+      loader: 'babel-loader'
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
-    }, {
-      test: /\.less/,
-      loader: 'style-loader!css-loader!less-loader'
+      loader: 'style-loader!css-loader!postcss-loader'
     }, {
       test: /\.(png|jpg)$/,
       loader: 'url-loader?limit=8192'
+    }, {
+      test: /\.(ttf|eot|svg)/,
+      loader: 'file-loader'
+    }, {
+      test: /\.woff(2)?/,
+      loader: 'url-loader?limit=10000&minetype=application/font-woff'
     }]
-  }
+  },
+
+  postcss: [
+    cssnext({
+      browsers: ['last 1 version', '> 2%']
+    }),
+    cssgrace
+  ]
+
 };

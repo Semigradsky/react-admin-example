@@ -38,7 +38,6 @@ Type `grunt serve` for start developing.
   - [babel-loader](https://github.com/babel/babel-loader) - Turn ES6 code into vanilla ES5 with no runtime required using [babel](https://github.com/babel/babel)
   - [css-loader](https://github.com/webpack/css-loader) - css loader module for webpack
   - [file-loader](https://github.com/webpack/file-loader) - file loader for webpack
-  - [jsx-loader](https://github.com/petehunt/jsx-loader) - JSX loader for webpack
   - [react-hot-loader](https://github.com/gaearon/react-hot-loader) - Tweak React components in real time
   - [style-loader](https://github.com/webpack/style-loader) - style loader module for webpack
   - [url-loader](https://github.com/webpack/url-loader) - url loader module for webpack

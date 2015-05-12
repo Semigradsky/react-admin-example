@@ -5,6 +5,7 @@
  * the subfolder /webpack-dev-server/ is visited. Visiting the root will not automatically reload.
  */
 'use strict';
+
 var webpack = require('webpack');
 var cssnext = require('cssnext');
 var cssgrace = require('cssgrace');
@@ -18,7 +19,7 @@ module.exports = {
 
   cache: true,
   debug: true,
-  devtool: false,
+  devtool: 'source-map',
   entry: [
       'webpack/hot/only-dev-server',
       './src/scripts/main.js'
@@ -46,7 +47,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader!react-hot!jsx-loader?harmony'
+        loader: 'react-hot!babel-loader'
       }, {
         test:   /\.css$/,
         loader: 'style-loader!css-loader!postcss-loader'
