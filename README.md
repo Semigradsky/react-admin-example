@@ -22,7 +22,7 @@ Type `grunt serve` for start developing.
 
 ## Dev Dependencies [![devDependency Status](https://david-dm.org/semigradsky/react-admin-example/dev-status.svg)](https://david-dm.org/semigradsky/react-admin-example#info=devDependencies)
 
-- [faker](https://github.com/Marak/faker.js) - generate massive amounts of fake data
+- [json-schema-faker](https://github.com/pateketrueke/json-schema-faker) - generate massive amounts of fake data
 - grunt
   - [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) - Load multiple grunt tasks using globbing patterns
 - grunt tasks:

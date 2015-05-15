@@ -1,0 +1,43 @@
+{
+  "title": "User",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "faker": "random.uuid"
+    },
+    "name": {
+      "type": "string",
+      "faker": "name.findName"
+    },
+    "login": {
+      "type": "string",
+      "faker": "internet.userName"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "faker": "internet.email"
+    },
+    "city": {
+      "type": "string",
+      "faker": "address.city"
+    },
+    "country": {
+      "type": "string",
+      "faker": "address.country"
+    },
+    "birthday": {
+      "type": "string",
+      "format": "date-time",
+      "faker": {
+        "date.between": [1940, 2015]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "login",
+    "email"
+  ]
+}

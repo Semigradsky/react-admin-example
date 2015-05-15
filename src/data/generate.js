@@ -1,25 +1,17 @@
 var fs = require('fs');
 var path = require('path');
-var faker= require('faker');
+var jsf = require('json-schema-faker');
+var userSchema = require('./user.schema.json')
 
 var users = [];
 var countUsers = 2000;
 
-for(i = countUsers; i > 0; i--){
-  users.push(generateUserProfile());
+while (countUsers > 0) {
+  countUsers--;
+  // https://github.com/pateketrueke/json-schema-faker/issues/42
+  users.push(jsf(userSchema));
 };
 
 fs.writeFile(path.resolve(__dirname, 'db.json'), JSON.stringify({ users: users }), function() {
   console.log('data set generated successfully!');
 });
-
-function generateUserProfile() {
-  return {
-    name: faker.name.findName(),
-    login: faker.internet.userName(),
-    email: faker.internet.email(),
-    city: faker.address.city(),
-    country: faker.address.country(),
-    birthday: faker.date.between(new Date(1940, 1, 1), new Date())
-  };
-}
