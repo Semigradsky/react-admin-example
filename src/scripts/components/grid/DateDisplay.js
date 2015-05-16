@@ -5,7 +5,7 @@ const fecha = require('fecha');
 
 const DateDisplay = React.createClass({
     render() {
-        return <span>{fecha.format(new Date(this.props.data), 'D MMM YYYY')}</span>;
+        return <span>{this.props.data ? fecha.format(new Date(this.props.data), 'D MMM YYYY') : ''}</span>;
     }
 });
 

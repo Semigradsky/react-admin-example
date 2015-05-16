@@ -45,6 +45,7 @@ a:active, a:hover {
   padding: var(--navbarHeight) 30px var(--footerHeight);
   border-left: 1px solid var(--mainBorderColor);
   background-color: #FFF;
+  overflow: auto;
 }
 #page-content.auth {
   margin-left: var(--sidebarWidth);
