@@ -1,11 +1,11 @@
 'use strict';
 
-const React = require('react');
+import React from 'react';
 
-const users = require('services/users');
-const Authentication = require('mixins/Authentication');
-const Grid = require('components/grid/Grid');
-const DateDisplay = require('components/grid/DateDisplay');
+import users from 'services/users';
+import Authentication from 'mixins/Authentication';
+import Grid from 'components/grid/Grid';
+import DateDisplay from 'components/grid/DateDisplay';
 
 const metadata = [
   { columnName: 'name', displayName: 'Name' },
@@ -38,7 +38,7 @@ const UserList = React.createClass({
       <div>
         <h1>Users</h1>
         <Grid
-          data={this.state.users}
+          results={this.state.users}
           columns={['name', 'login', 'email', 'birthday']}
           columnMetadata={metadata}
           className="users-list"
@@ -52,4 +52,4 @@ const UserList = React.createClass({
 
 });
 
-module.exports = UserList;
+export default UserList;

@@ -1,12 +1,12 @@
 'use strict';
 
-const React = require('react');
-const { Navigation, RouteHandler } = require('react-router');
+import React from 'react';
+import { Navigation, RouteHandler } from 'react-router';
 
-const Navbar = require('components/navbar/Navbar');
-const PageFooter = require('components/PageFooter');
+import Navbar from 'components/navbar/Navbar';
+import PageFooter from 'components/PageFooter';
 
-const auth = require('services/auth');
+import auth from 'services/auth';
 
 const App = React.createClass({
   mixins: [Navigation],
@@ -44,4 +44,4 @@ const App = React.createClass({
   }
 });
 
-module.exports = App;
+export default App;

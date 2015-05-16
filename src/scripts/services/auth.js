@@ -3,7 +3,7 @@
 
 'use strict';
 
-function pretendRequest(email, pass, cb) {
+const pretendRequest = (email, pass, cb) => {
   setTimeout(() => {
     if (email === 'joe@example.com' && pass === 'password1') {
       cb({
@@ -16,7 +16,7 @@ function pretendRequest(email, pass, cb) {
   }, 0);
 }
 
-var auth = {
+const auth = {
   login(email, pass, cb) {
     cb = arguments[arguments.length - 1];
 
@@ -55,4 +55,4 @@ var auth = {
   onChange() {}
 };
 
-module.exports = auth;
+export default auth;

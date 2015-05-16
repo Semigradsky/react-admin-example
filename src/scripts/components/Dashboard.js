@@ -1,11 +1,11 @@
 'use strict';
 
-const React = require('react');
+import React from 'react';
 
-const auth = require('services/auth');
-const Authentication = require('mixins/Authentication');
+import auth from 'services/auth';
+import Authentication from 'mixins/Authentication';
 
-const imageURL = require('images/yeoman.png');
+import imageURL from 'images/yeoman.png';
 
 const Dashboard = React.createClass({
   mixins: [ Authentication ],
@@ -23,4 +23,4 @@ const Dashboard = React.createClass({
   }
 });
 
-module.exports = Dashboard;
+export default Dashboard;

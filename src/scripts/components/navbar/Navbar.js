@@ -1,11 +1,11 @@
 'use strict';
 
-const React = require('react');
-const { Link } = require('react-router');
+import React from 'react';
+import { Link } from 'react-router';
 
-const Sidebar = require('components/navbar/Sidebar');
+import Sidebar from 'components/navbar/Sidebar';
 
-const Navbar = React.createClass({
+class Navbar extends React.Component {
   render() {
     var header = this.props.auth ?
         <div className="navbar-header">
@@ -32,6 +32,6 @@ const Navbar = React.createClass({
       </nav>
     );
   }
-});
+}
 
-module.exports = Navbar;
+export default Navbar;

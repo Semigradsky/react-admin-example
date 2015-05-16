@@ -1,6 +1,6 @@
 'use strict';
 
-const request = require('superagent');
+import request from 'superagent';
 
 const serverUrl = 'http://localhost:3000';
 
@@ -12,4 +12,4 @@ const users = {
   }
 };
 
-module.exports = users;
+export default users;

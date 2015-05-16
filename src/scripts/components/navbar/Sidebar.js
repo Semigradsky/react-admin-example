@@ -1,9 +1,9 @@
 'use strict';
 
-const React = require('react');
-const { Link } = require('react-router');
+import React from 'react';
+import { Link } from 'react-router';
 
-const Sidebar = React.createClass({
+class Sidebar extends React.Component {
   render() {
     return (
       <div className="sidebar" role="navigation">
@@ -18,6 +18,6 @@ const Sidebar = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = Sidebar;
+export default Sidebar;

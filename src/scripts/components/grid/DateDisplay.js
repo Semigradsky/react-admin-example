@@ -1,12 +1,14 @@
 'use strict';
 
-const React = require('react');
-const fecha = require('fecha');
+import React from 'react';
+import fecha from 'fecha';
 
-const DateDisplay = React.createClass({
+class DateDisplay extends React.Component {
     render() {
-        return <span>{this.props.data ? fecha.format(new Date(this.props.data), 'D MMM YYYY') : ''}</span>;
+        return <span>
+          {this.props.data ? fecha.format(new Date(this.props.data), 'D MMM YYYY') : ''}
+        </span>;
     }
-});
+}
 
-module.exports = DateDisplay;
+export default DateDisplay;

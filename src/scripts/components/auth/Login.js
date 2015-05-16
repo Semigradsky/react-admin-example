@@ -1,9 +1,9 @@
 'use strict';
 
-const React = require('react');
-const Router = require('react-router');
+import React from 'react';
+import Router from 'react-router';
 
-const auth = require('services/auth');
+import auth from 'services/auth';
 
 const Login = React.createClass({
   mixins: [ Router.Navigation ],
@@ -50,4 +50,4 @@ const Login = React.createClass({
   }
 });
 
-module.exports = Login;
+export default Login;

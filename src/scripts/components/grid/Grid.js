@@ -1,24 +1,20 @@
 'use strict';
 
-const React = require('react');
-const Griddle = require('griddle-react');
+import React from 'react';
+import Griddle from 'griddle-react';
 
-const Grid = React.createClass({
+class Grid extends React.Component {
   render() {
     return <Griddle
-      results={this.props.data}
-      columns={this.props.columns}
-      columnMetadata={this.props.columnMetadata}
-      resultsPerPage={this.props.resultsPerPage}
-      initialSort={this.props.initialSort}
-      initialSortAscending={this.props.initialSortAscending}
 
       useGriddleStyles={false}
       tableClassName={'table ' + this.props.className}
       nextClassName="next-data"
       previousClassName="prev-data"
+
+      {...this.props}
     />
   }
-});
+}
 
-module.exports = Grid;
+export default Grid;

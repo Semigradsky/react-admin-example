@@ -1,7 +1,7 @@
 'use strict';
 
-const auth = require('services/auth');
-const Login = require('components/auth/Login');
+import auth from 'services/auth';
+import Login from 'components/auth/Login';
 
 const Authentication = {
   statics: {
@@ -14,4 +14,4 @@ const Authentication = {
   }
 };
 
-module.exports = Authentication;
+export default Authentication;
