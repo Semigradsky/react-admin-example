@@ -22,10 +22,12 @@ Type `grunt serve` for start developing.
 
 ## Dev Dependencies [![devDependency Status](https://david-dm.org/semigradsky/react-admin-example/dev-status.svg)](https://david-dm.org/semigradsky/react-admin-example#info=devDependencies)
 
+- [eslint](https://github.com/eslint/eslint) - A fully pluggable tool for identifying and reporting on patterns in JavaScript
+  - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) - React specific linting rules for ESLint
 - [json-schema-faker](https://github.com/pateketrueke/json-schema-faker) - generate massive amounts of fake data
 - grunt
   - [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) - Load multiple grunt tasks using globbing patterns
-- grunt tasks:
+- some grunt tasks:
   - grunt-contrib-clean
   - grunt-contrib-connect
   - grunt-contrib-copy
@@ -35,13 +37,14 @@ Type `grunt serve` for start developing.
 - [webpack](https://github.com/webpack/webpack) - Packs CommonJs/AMD modules for the browser
   - [webpack-dev-server](https://github.com/webpack/webpack-dev-server) - Serves a webpack app. Updates the browser on changes
 - webpack loaders:
-  - [babel-loader](https://github.com/babel/babel-loader) - Turn ES6 code into vanilla ES5 with no runtime required using [babel](https://github.com/babel/babel)
-  - [css-loader](https://github.com/webpack/css-loader) - css loader module for webpack
-  - [file-loader](https://github.com/webpack/file-loader) - file loader for webpack
-  - [react-hot-loader](https://github.com/gaearon/react-hot-loader) - Tweak React components in real time
-  - [style-loader](https://github.com/webpack/style-loader) - style loader module for webpack
-  - [url-loader](https://github.com/webpack/url-loader) - url loader module for webpack
-  - [postcss-loader](https://github.com/postcss/postcss-loader) - PostCSS loader for webpack
+  - [babel-loader](https://github.com/babel/babel-loader)
+  - [css-loader](https://github.com/webpack/css-loader)
+  - [eslint-loader](https://github.com/MoOx/eslint-loader)
+  - [file-loader](https://github.com/webpack/file-loader)
+  - [react-hot-loader](https://github.com/gaearon/react-hot-loader)
+  - [style-loader](https://github.com/webpack/style-loader)
+  - [url-loader](https://github.com/webpack/url-loader)
+  - [postcss-loader](https://github.com/postcss/postcss-loader)
 - PostCSS plugins:
   - [cssgrace](https://github.com/cssdream/cssgrace) - Adds IE hacks, missing properties, repairs common errors, etc.
   - [cssnext](https://github.com/cssnext/cssnext) - Adds variables, custom selectors, custom media queries, automatic vendor prefixes, inline @import rules, etc.
