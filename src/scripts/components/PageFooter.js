@@ -5,10 +5,12 @@ import { Link } from 'react-router';
 
 class PageFooter extends React.Component {
   render() {
-    return <footer className="page-footer">
-      <span>Semigradsky, 2015</span>
-      <span className="about"><Link to="about">About</Link></span>
-    </footer>;
+    return (
+      <footer className="page-footer">
+        <span>Semigradsky, 2015</span>
+        <span className="about"><Link to="about">About</Link></span>
+      </footer>
+    );
   }
 }
 

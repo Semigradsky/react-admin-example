@@ -1,5 +1,4 @@
 // Fake authentication lib
-/*jshint -W030 */
 
 'use strict';
 
@@ -8,13 +7,13 @@ const pretendRequest = (email, pass, cb) => {
     if (email === 'joe@example.com' && pass === 'password1') {
       cb({
         authenticated: true,
-        token: Math.random().toString(36).substring(7),
+        token: Math.random().toString(36).substring(7)
       });
     } else {
       cb({ authenticated: false });
     }
   }, 0);
-}
+};
 
 const auth = {
   login(email, pass, cb) {
