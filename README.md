@@ -1,6 +1,8 @@
 React Admin Panel Example
 ===
 
+<img src="https://cloud.githubusercontent.com/assets/1198848/7671756/2dcecc10-fce4-11e4-90a6-71d8a47a307d.png" width="400" alt="img" />
+
 ## Development
 
 Type `npm run init` for generate fake db data.
