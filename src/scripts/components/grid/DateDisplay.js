@@ -5,9 +5,11 @@ import fecha from 'fecha';
 
 class DateDisplay extends React.Component {
     render() {
-        return <span>
-          {this.props.data ? fecha.format(new Date(this.props.data), 'D MMM YYYY') : ''}
-        </span>;
+        return (
+          <span>
+            {this.props.data ? fecha.format(new Date(this.props.data), 'D MMM YYYY') : ''}
+          </span>
+        );
     }
 }
 

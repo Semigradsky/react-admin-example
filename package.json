@@ -13,7 +13,8 @@
   "mainOutput": "main",
   "scripts": {
     "init": "node src/data/generate.js",
-    "server": "json-server src/data/db.json"
+    "server": "json-server src/data/db.json",
+    "lint": "eslint src"
   },
   "dependencies": {
     "console-polyfill": "^0.2.1",
@@ -32,6 +33,9 @@
     "css-loader": "^0.12.0",
     "cssgrace": "^2.0.2",
     "cssnext": "^1.4.0",
+    "eslint": "0.21.0",
+    "eslint-loader": "^0.11.2",
+    "eslint-plugin-react": "^2.3.0",
     "file-loader": "^0.8.1",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",

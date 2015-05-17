@@ -30,12 +30,12 @@ const App = React.createClass({
   },
 
   render() {
-    var auth = this.state.loggedIn;
+    const authState = this.state.loggedIn;
 
     return (
       <div id="content">
-        <Navbar auth={auth} />
-        <div id="page-content" className={auth ? 'auth' : ''}>
+        <Navbar auth={authState} />
+        <div id="page-content" className={authState ? 'auth' : ''}>
           <RouteHandler />
         </div>
         <PageFooter />

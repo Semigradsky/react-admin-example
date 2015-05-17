@@ -43,9 +43,12 @@ module.exports = {
   },
 
   module: {
+    preLoaders: [
+      {test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/}
+    ],
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loaders: ['react-hot', 'babel'] },
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
+      { test: /\.js$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
       { test: /\.(ttf|eot|svg)/, loader: 'file-loader' },
