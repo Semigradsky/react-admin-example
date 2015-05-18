@@ -25,7 +25,8 @@
     "normalize.css": "^3.0.3",
     "react": "~0.13.2",
     "react-router": "^0.13.3",
-    "superagent": "^1.2.0"
+    "superagent": "^1.2.0",
+    "superagent-no-cache": "^0.1.0"
   },
   "devDependencies": {
     "babel-core": "^5.2.15",

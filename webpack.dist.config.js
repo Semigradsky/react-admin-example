@@ -42,7 +42,8 @@ module.exports = {
       'images': 'src/images',
       'components': 'src/scripts/components/',
       'mixins': 'src/scripts/mixins',
-      'services': 'src/scripts/services'
+      'services': 'src/scripts/services',
+      'utils': 'src/scripts/utils'
     }
   },
 

@@ -1,12 +1,10 @@
 'use strict';
 
-import request from 'superagent';
-
-const serverUrl = 'http://localhost:3000';
+import request from 'utils/request';
 
 const users = {
   getAll(fn) {
-    request.get(serverUrl + '/users').end((err, res) => {
+    request('get', 'users', (err, res) => {
       fn(err ? [] : res.body);
     });
   }
