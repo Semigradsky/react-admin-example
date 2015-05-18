@@ -21,6 +21,7 @@ Type `grunt serve` for start developing.
 - react
 - [react-router](https://github.com/rackt/react-router) - A complete routing solution for React.js
 - [superagent](https://github.com/visionmedia/superagent) - Ajax with less suck
+  - [superagent-no-cache](https://github.com/johntron/superagent-no-cache) - Adds headers to all requests that prevents caching.
 
 ## Dev Dependencies [![devDependency Status](https://david-dm.org/semigradsky/react-admin-example/dev-status.svg)](https://david-dm.org/semigradsky/react-admin-example#info=devDependencies)
 
@@ -33,7 +34,6 @@ Type `grunt serve` for start developing.
   - grunt-contrib-clean
   - grunt-contrib-connect
   - grunt-contrib-copy
-  - grunt-karma
   - grunt-open
   - grunt-webpack
 - [webpack](https://github.com/webpack/webpack) - Packs CommonJs/AMD modules for the browser
