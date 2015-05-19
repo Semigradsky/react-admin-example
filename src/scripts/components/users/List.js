@@ -6,6 +6,7 @@ import users from 'services/users';
 import Authentication from 'mixins/Authentication';
 import Grid from 'components/grid/Grid';
 import DateDisplay from 'components/grid/DateDisplay';
+import Loading from 'components/Loading';
 
 const metadata = [
   { columnName: 'name', displayName: 'Name' },
@@ -19,6 +20,7 @@ const UserList = React.createClass({
 
   getInitialState() {
     return {
+      dataLoaded: false,
       users: []
     };
   },
@@ -27,6 +29,7 @@ const UserList = React.createClass({
     users.getAll((data) => {
       if (this.isMounted()) {
         this.setState({
+          dataLoaded: true,
           users: data
         });
       }
@@ -37,15 +40,17 @@ const UserList = React.createClass({
     return (
       <div>
         <h1>Users</h1>
-        <Grid
-          results={this.state.users}
-          columns={['name', 'login', 'email', 'birthday']}
-          columnMetadata={metadata}
-          className="users-list"
-          resultsPerPage={20}
-          initialSort="name"
-          initialSortAscending={true}
-        />
+        <Loading progress={!this.state.dataLoaded}>
+          <Grid
+            results={this.state.users}
+            columns={['name', 'login', 'email', 'birthday']}
+            columnMetadata={metadata}
+            className="users-list"
+            resultsPerPage={20}
+            initialSort="name"
+            initialSortAscending={true}
+          />
+        </Loading>
       </div>
     );
   }
