@@ -12,7 +12,107 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   <div id="content">
-    <h1>If you can see this, something is broken (or JS is not enabled)!!.</h1>
+    <div class="pace pace-active"><div class="pace-progress"><div class="pace-progress-inner"></div></div><div class="pace-activity"></div></div>
+    <style>
+.pace {
+  z-index: 2000;
+  position: fixed;
+  height: 60px;
+  width: 100px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.pace .pace-progress {
+  z-index: 2000;
+  position: absolute;
+  height: 60px;
+  width: 100px;
+
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.pace .pace-progress:before {
+  content: ' ';
+  background: #29d;
+  border-radius: 50%;
+  padding: 20% 0 7px;
+  width: 50%;
+  height: 40%;
+  margin: 10px 0 0 30px;
+  display: block;
+  z-index: 999;
+  position: absolute;
+}
+
+.pace .pace-activity {
+  z-index: 2000;
+  position: absolute;
+  height: 60px;
+  width: 100px;
+  display: block;
+  -webkit-animation: pace-theme-center-atom-spin 2s linear infinite;
+  -moz-animation: pace-theme-center-atom-spin 2s linear infinite;
+  -o-animation: pace-theme-center-atom-spin 2s linear infinite;
+  animation: pace-theme-center-atom-spin 2s linear infinite;
+}
+
+.pace .pace-activity,
+.pace .pace-activity:after,
+.pace .pace-activity:before {
+  border-radius: 50%;
+  border: 5px solid #29d;
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100px;
+}
+
+.pace .pace-activity:after,
+.pace .pace-activity:before {
+  top: -5px;
+  left: -5px;
+}
+
+.pace .pace-activity:after {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.pace .pace-activity:before {
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+@-webkit-keyframes pace-theme-center-atom-spin {
+  0%   { -webkit-transform: rotate(0deg) }
+  100% { -webkit-transform: rotate(359deg) }
+}
+@-moz-keyframes pace-theme-center-atom-spin {
+  0%   { -moz-transform: rotate(0deg) }
+  100% { -moz-transform: rotate(359deg) }
+}
+@-o-keyframes pace-theme-center-atom-spin {
+  0%   { -o-transform: rotate(0deg) }
+  100% { -o-transform: rotate(359deg) }
+}
+@keyframes pace-theme-center-atom-spin {
+  0%   { transform: rotate(0deg) }
+  100% { transform: rotate(359deg) }
+}
+  </style>
   </div>
   <script type="text/javascript" src="assets/main.js"></script>
 </body>
