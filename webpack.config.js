@@ -39,7 +39,8 @@ module.exports = {
       'components': 'src/scripts/components/',
       'mixins': 'src/scripts/mixins',
       'services': 'src/scripts/services',
-      'utils': 'src/scripts/utils'
+      'utils': 'src/scripts/utils',
+      'ie': 'component-ie'
     }
   },
 
