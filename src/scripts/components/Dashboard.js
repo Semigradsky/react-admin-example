@@ -15,7 +15,7 @@ const Dashboard = React.createClass({
     return (
       <div>
         <h1>Dashboard</h1>
-        <img src={imageURL} />
+        <img alt="logo" src={imageURL} />
         <p>You made it!</p>
         <p>{token}</p>
       </div>
