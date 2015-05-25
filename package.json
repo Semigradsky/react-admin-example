@@ -31,7 +31,7 @@
   "devDependencies": {
     "babel-core": "^5.2.15",
     "babel-loader": "^5.0.0",
-    "css-loader": "^0.12.0",
+    "css-loader": "^0.14.2",
     "cssgrace": "^2.0.2",
     "cssnext": "^1.4.0",
     "eslint": "^0.21.2",
@@ -44,7 +44,7 @@
     "grunt-contrib-copy": "^0.8.0",
     "grunt-open": "^0.2.3",
     "grunt-webpack": "^1.0.8",
-    "json-schema-faker": "^0.1.9",
+    "json-schema-faker": "^0.1.10",
     "load-grunt-tasks": "^3.1.0",
     "postcss": "^4.1.8",
     "postcss-loader": "^0.4.2",
