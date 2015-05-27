@@ -2,7 +2,7 @@
 
 require('console-polyfill');
 
-require('normalize.css');
+require('bootstrap/dist/css/bootstrap.css');
 require('styles/main.css');
 require('font-awesome/css/font-awesome.css');
 

@@ -26,6 +26,7 @@
 
 .navbar {
   border: 1px solid var(--mainBorderColor);
+  border-radius: 0;
   z-index: 1000;
   position: relative;
   height: var(--navbarHeight);

@@ -17,13 +17,15 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "bootstrap": "^3.3.4",
     "console-polyfill": "^0.2.1",
     "fecha": "^0.2.1",
     "font-awesome": "^4.3.0",
+    "formsy-react": "^0.14.1",
+    "formsy-react-components": "^0.3.0",
     "griddle-react": "^0.2.12",
     "json-server": "^0.7.3",
-    "normalize.css": "^3.0.3",
-    "react": "~0.13.2",
+    "react": "~0.13.3",
     "react-router": "^0.13.3",
     "superagent": "^1.2.0",
     "superagent-no-cache": "^0.1.0"
