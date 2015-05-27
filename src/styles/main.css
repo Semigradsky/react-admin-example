@@ -4,6 +4,13 @@ html, body {
   height: 100%;
 }
 
+body {
+  font-family: var(--mainFontFamily);
+  font-size: var(--mainFontSize);
+  line-height: 1.42857143;
+  color: var(--mainTextColor);
+}
+
 a {
   color: var(--linkColor);
   text-decoration: none;
@@ -38,6 +45,4 @@ a:active, a:hover {
   border-left: 1px solid var(--mainBorderColor);
 }
 
-@import 'navbar.css';
-@import 'footer.css';
 @import 'tables.css';

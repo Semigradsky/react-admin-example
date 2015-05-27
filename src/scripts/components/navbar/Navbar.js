@@ -5,6 +5,8 @@ import { Link } from 'react-router';
 
 import Sidebar from 'components/navbar/Sidebar';
 
+require('./navbar.css');
+
 class Navbar extends React.Component {
   render() {
     var header = this.props.auth ?

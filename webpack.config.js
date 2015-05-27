@@ -60,7 +60,10 @@ module.exports = {
 
   postcss: [
     cssnext({
-      browsers: ['last 1 version', '> 2%']
+      browsers: ['last 1 version', '> 2%'],
+      import: {
+        root: 'scripts/styles'
+      }
     }),
     cssgrace
   ],

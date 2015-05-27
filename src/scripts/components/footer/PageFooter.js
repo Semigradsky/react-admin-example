@@ -3,6 +3,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+require('./footer.css');
+
 class PageFooter extends React.Component {
   render() {
     return (

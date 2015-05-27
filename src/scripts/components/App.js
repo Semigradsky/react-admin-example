@@ -4,7 +4,7 @@ import React from 'react';
 import { Navigation, RouteHandler } from 'react-router';
 
 import Navbar from 'components/navbar/Navbar';
-import PageFooter from 'components/PageFooter';
+import PageFooter from 'components/footer/PageFooter';
 
 import auth from 'services/auth';
 
