@@ -1,20 +1,7 @@
 @import '--variables.css';
 
-* {
-  box-sizing: border-box;
-}
-
-html {
+html, body {
   height: 100%;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-body {
-  height: 100%;
-  font-family: var(--mainFontFamily);
-  font-size: var(--mainFontSize);
-  line-height: 1.42857143;
-  color: var(--mainTextColor);
 }
 
 a {
@@ -43,12 +30,12 @@ a:active, a:hover {
   height: 100%;
   margin: 0;
   padding: var(--navbarHeight) 30px var(--footerHeight);
-  border-left: 1px solid var(--mainBorderColor);
   background-color: #FFF;
   overflow: auto;
 }
 #page-content.auth {
   margin-left: var(--sidebarWidth);
+  border-left: 1px solid var(--mainBorderColor);
 }
 
 @import 'navbar.css';

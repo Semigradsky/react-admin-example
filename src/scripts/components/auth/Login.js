@@ -2,8 +2,12 @@
 
 import React from 'react';
 import Router from 'react-router';
+import Formsy from 'formsy-react';
+import FRC from 'formsy-react-components';
 
 import auth from 'services/auth';
+
+require('./login.css');
 
 const Login = React.createClass({
   mixins: [ Router.Navigation ],
@@ -18,11 +22,8 @@ const Login = React.createClass({
     };
   },
 
-  handleSubmit(event) {
-    event.preventDefault();
-    const email = this.refs.email.getDOMNode().value;
-    const pass = this.refs.pass.getDOMNode().value;
-    auth.login(email, pass, (loggedIn) => {
+  handleSubmit(data) {
+    auth.login(data.email, data.pass, (loggedIn) => {
       if (!loggedIn) {
         return this.setState({ error: true });
       }
@@ -40,12 +41,14 @@ const Login = React.createClass({
   render() {
     const errors = this.state.error ? <p>Bad login information</p> : '';
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label><input ref="email" placeholder="email" defaultValue="joe@example.com"/></label>
-        <label><input ref="pass" placeholder="password"/></label> (hint: password1)<br/>
-        <button type="submit">login</button>
+      <Formsy.Form onSubmit={this.handleSubmit} className="form-horizontal form login-form">
+        <FRC.Input name="email" label="Email" placeholder="email" value="joe@example.com" />
+        <FRC.Input name="pass" label="Password" type="password" placeholder="password" help="(hint: password1)" />
+        <FRC.Row layout="horizontal">
+          <input className="btn btn-primary" formNoValidate={true} type="submit" value="Login" />
+        </FRC.Row>
         {errors}
-      </form>
+      </Formsy.Form>
     );
   }
 });
