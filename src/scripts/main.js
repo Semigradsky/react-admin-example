@@ -10,6 +10,8 @@ const React = require('react');
 const Router = require('react-router');
 const { Route } = Router;
 
+DEV && require('react-a11y')(React);
+
 const App = require('components/App');
 const Logout = require('components/auth/Logout');
 const Login = require('components/auth/Login');

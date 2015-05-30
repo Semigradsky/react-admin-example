@@ -34,5 +34,8 @@
     "react/no-multi-comp": 1,
     "react/self-closing-comp": 1,
     "react/wrap-multilines": 1
+  },
+  "globals": {
+    "DEV": true
   }
 }
