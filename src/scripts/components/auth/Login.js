@@ -33,7 +33,7 @@ const Login = React.createClass({
         Login.attemptedTransition = null;
         transition.retry();
       } else {
-        this.replaceWith('/about');
+        this.transitionTo('dashboard');
       }
     });
   },

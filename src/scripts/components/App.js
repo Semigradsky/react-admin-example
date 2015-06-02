@@ -21,7 +21,7 @@ const App = React.createClass({
     this.setState({
       loggedIn: loggedIn
     });
-    this.transitionTo(loggedIn ? 'dashboard' : 'login');
+    !loggedIn && this.transitionTo('login');
   },
 
   componentWillMount() {
