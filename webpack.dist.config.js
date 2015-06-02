@@ -9,6 +9,7 @@
 var webpack = require('webpack');
 var cssnext = require('cssnext');
 var cssgrace = require('cssgrace');
+var nested = require('postcss-nested');
 
 module.exports = {
 
@@ -68,6 +69,7 @@ module.exports = {
   },
 
   postcss: [
+    nested,
     cssnext({
       browsers: ['last 1 version', '> 2%']
     }),

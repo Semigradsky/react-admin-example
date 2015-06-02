@@ -11,8 +11,8 @@
   line-height: var(--footerHeight);
   font-size: var(--footerFontSize);
   border: 1px solid var(--mainBorderColor);
-}
 
-.page-footer .about {
-  padding-left: var(--mainLeftPadding);
+  .about {
+    padding-left: var(--mainLeftPadding);
+  }
 }

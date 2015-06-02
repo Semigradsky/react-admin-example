@@ -14,14 +14,14 @@ body {
 a {
   color: var(--linkColor);
   text-decoration: none;
-}
 
-a:focus, a:hover {
-  color: var(--linkHoverColor);
-}
+  &:focus, &:hover {
+    color: var(--linkHoverColor);
+  }
 
-a:active, a:hover {
-  outline: 0;
+  &:active, &:hover {
+    outline: 0;
+  }
 }
 
 #content {
@@ -39,10 +39,9 @@ a:active, a:hover {
   padding: var(--navbarHeight) 30px var(--footerHeight);
   background-color: #FFF;
   overflow: auto;
-}
-#page-content.auth {
-  margin-left: var(--sidebarWidth);
-  border-left: 1px solid var(--mainBorderColor);
-}
 
-@import 'tables.css';
+  &.auth {
+    margin-left: var(--sidebarWidth);
+    border-left: 1px solid var(--mainBorderColor);
+  }
+}

@@ -1,0 +1,11 @@
+.users-list {
+  max-width: 900px;
+
+  th.birthday {
+    width: 100px;
+  }
+
+  td.birthday {
+    text-align: right;
+  }
+}

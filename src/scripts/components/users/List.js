@@ -8,6 +8,8 @@ import Grid from 'components/grid/Grid';
 import DateDisplay from 'components/grid/DateDisplay';
 import Loading from 'components/Loading';
 
+require('./users.css');
+
 const metadata = [
   { columnName: 'name', displayName: 'Name' },
   { columnName: 'login', displayName: 'Login' },
