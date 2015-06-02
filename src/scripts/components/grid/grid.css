@@ -49,19 +49,19 @@
       border: none;
       background: none;
     }
+  }
 
-    .prev-data {
-      button {
-        margin-right: 10px;
-      }
+  .prev-data {
+    button {
+      margin-right: 10px;
     }
+  }
 
-    .next-data {
-      text-align: right;
+  .next-data {
+    text-align: right;
 
-      button {
-        margin-left: 10px;
-      }
+    button {
+      margin-left: 10px;
     }
   }
 
