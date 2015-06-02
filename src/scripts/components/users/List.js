@@ -6,6 +6,7 @@ import users from 'services/users';
 import Authentication from 'mixins/Authentication';
 import Grid from 'components/grid/Grid';
 import DateDisplay from 'components/grid/DateDisplay';
+import EditingDisplay from 'components/grid/EditingDisplay';
 import Loading from 'components/Loading';
 
 require('./users.css');
@@ -14,7 +15,8 @@ const metadata = [
   { columnName: 'name', displayName: 'Name' },
   { columnName: 'login', displayName: 'Login' },
   { columnName: 'email', displayName: 'E-mail' },
-  { columnName: 'birthday', displayName: 'Birthday', customComponent: DateDisplay, cssClassName: 'birthday' }
+  { columnName: 'birthday', displayName: 'Birthday', customComponent: DateDisplay, cssClassName: 'birthday' },
+  { columnName: 'options', displayName: '', customComponent: EditingDisplay, cssClassName: 'options' }
 ];
 
 const UserList = React.createClass({
@@ -45,7 +47,7 @@ const UserList = React.createClass({
         <Loading progress={!this.state.dataLoaded}>
           <Grid
             results={this.state.users}
-            columns={['name', 'login', 'email', 'birthday']}
+            columns={['name', 'login', 'email', 'birthday', 'options']}
             columnMetadata={metadata}
             className="users-list"
             resultsPerPage={20}

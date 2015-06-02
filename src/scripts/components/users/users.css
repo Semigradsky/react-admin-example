@@ -8,4 +8,12 @@
   td.birthday {
     text-align: right;
   }
+
+  th.options {
+    width: 30px;
+  }
+
+  td.options {
+    text-align: center;
+  }
 }

@@ -7,6 +7,11 @@ const users = {
     request('get', 'users', (err, res) => {
       fn(err ? [] : res.body);
     });
+  },
+  get(id, fn) {
+    request('get', 'users/' + id, (err, res) => {
+      fn(err ? [] : res.body);
+    });
   }
 };
 
