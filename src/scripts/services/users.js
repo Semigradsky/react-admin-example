@@ -12,6 +12,11 @@ const users = {
     request('get', 'users/' + id, (err, res) => {
       fn(err ? [] : res.body);
     });
+  },
+  save(id, data, fn) {
+    request('put', 'users/' + id, data, (err, res) => {
+      fn(err, res.body);
+    });
   }
 };
 

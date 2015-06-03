@@ -4,9 +4,8 @@ import React from 'react';
 
 class Loading extends React.Component {
   render() {
-    return !this.props.progress ? this.props.children : (
-      <i className="fa fa-refresh fa-spin fa-lg"></i>
-    );
+    const spin = <i className="fa fa-refresh fa-spin fa-lg"></i>;
+    return !this.props.progress ? (<div>{this.props.children}</div>) : spin;
   }
 }
 
