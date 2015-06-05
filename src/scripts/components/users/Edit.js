@@ -7,6 +7,7 @@ import FRC from 'formsy-react-components';
 import users from 'services/users';
 import Authentication from 'mixins/Authentication';
 import Loading from 'components/Loading';
+import Datepicker from 'components/inputs/Datepicker';
 
 require('./users.css');
 
@@ -58,7 +59,7 @@ const UserEdit = React.createClass({
             <FRC.Input type="text" name="login" label="Login" value={user.login} required />
             <FRC.Input type="email" name="email" label="Email" value={user.email} required validations="isEmail" />
             <FRC.Input type="text" name="name" label="Name" value={user.name} />
-            <FRC.Input type="text" name="birthday" label="Birthday" value={user.birthday} />
+            <Datepicker name="birthday" label="Birthday" value={user.birthday} readOnly />
             <FRC.Input type="text" name="city" label="City" value={user.city} />
             <FRC.Input type="text" name="country" label="Country" value={user.country} />
             <FRC.Row layout="horizontal">

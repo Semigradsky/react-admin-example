@@ -28,6 +28,7 @@
   "rules": {
     "quotes": [2, "single", "avoid-escape"],
     "no-unused-expressions": [0],
+    "no-new": false,
     "react/jsx-boolean-value": "always",
     "react/jsx-quotes": [2, "double", "avoid-escape"],
     "react/jsx-no-undef": 1,

@@ -18,6 +18,7 @@ Type `grunt serve` for start developing.
 - [font-awesome](https://github.com/FortAwesome/Font-Awesome) - The iconic font and CSS toolkit
 - [griddle-react](https://github.com/GriddleGriddle/Griddle) - Simple Grid Component written in React
 - [json-server](https://github.com/typicode/json-server) - a full fake REST API with zero coding
+- [pikaday](https://github.com/dbushell/Pikaday) - A refreshing JavaScript Datepicker — lightweight, no dependencies, modular CSS
 - react
 - [react-router](https://github.com/rackt/react-router) - A complete routing solution for React.js
 - [superagent](https://github.com/visionmedia/superagent) - Ajax with less suck
