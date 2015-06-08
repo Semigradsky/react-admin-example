@@ -14,7 +14,7 @@ var nested = require('postcss-nested');
 module.exports = {
 
   output: {
-    publicPath: 'react-admin-example/assets/',
+    publicPath: '/react-admin-example/assets/',
     path: 'dist/assets/',
     filename: 'main.js'
   },
