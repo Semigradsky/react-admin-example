@@ -1,5 +1,18 @@
+@import '--media.css';
+
 .login-form {
   min-width: 300px;
   width: 30%;
   margin: 100px auto 0;
+
+  @media (--small-viewport) {
+    width: 100%;
+    min-width: initial;
+    margin-top: 50px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
 }

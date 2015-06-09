@@ -41,7 +41,7 @@
   float: left;
   height: var(--navbarHeight);
   padding: var(--mainLeftPadding);
-  font-size: 18px;
+  font-size: 1.3em;
   color: #777;
 }
 
