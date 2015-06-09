@@ -12,6 +12,6 @@ while (countUsers > 0) {
   users.push(jsf(userSchema));
 }
 
-fs.writeFile(path.resolve(__dirname, 'db.json'), JSON.stringify({ users: users }), function() {
+fs.writeFile(path.resolve(__dirname, 'db.json'), JSON.stringify({ users: users }, null, 4), function() {
   console.log('data set generated successfully!');
 });
