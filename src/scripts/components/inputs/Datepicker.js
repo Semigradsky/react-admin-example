@@ -13,7 +13,8 @@ const Datepicker = React.createClass({
   mixins: [Formsy.Mixin],
 
   componentWillMount() {
-    this.setState({ shownValue: this.format(new Date(this.getValue())) });
+    const value = this.getValue();
+    this.setState({ shownValue: value ? this.format(new Date(value)) : '' });
   },
 
   componentDidMount() {
