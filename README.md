@@ -32,22 +32,11 @@ Type `grunt serve` for start developing.
 - grunt
   - [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) - Load multiple grunt tasks using globbing patterns
 - some grunt tasks:
-  - grunt-contrib-clean
-  - grunt-contrib-connect
-  - grunt-contrib-copy
-  - grunt-open
-  - grunt-webpack
+  - grunt-contrib-clean, grunt-contrib-connect, grunt-contrib-copy, grunt-open, grunt-webpack
 - [webpack](https://github.com/webpack/webpack) - Packs CommonJs/AMD modules for the browser
   - [webpack-dev-server](https://github.com/webpack/webpack-dev-server) - Serves a webpack app. Updates the browser on changes
 - webpack loaders:
-  - [babel-loader](https://github.com/babel/babel-loader)
-  - [css-loader](https://github.com/webpack/css-loader)
-  - [eslint-loader](https://github.com/MoOx/eslint-loader)
-  - [file-loader](https://github.com/webpack/file-loader)
-  - [react-hot-loader](https://github.com/gaearon/react-hot-loader)
-  - [style-loader](https://github.com/webpack/style-loader)
-  - [url-loader](https://github.com/webpack/url-loader)
-  - [postcss-loader](https://github.com/postcss/postcss-loader)
+  - [babel-loader](https://github.com/babel/babel-loader), [css-loader](https://github.com/webpack/css-loader), [eslint-loader](https://github.com/MoOx/eslint-loader), [file-loader](https://github.com/webpack/file-loader), [react-hot-loader](https://github.com/gaearon/react-hot-loader), [style-loader](https://github.com/webpack/style-loader), [url-loader](https://github.com/webpack/url-loader), [json-loader](https://github.com/webpack/json-loader), [postcss-loader](https://github.com/postcss/postcss-loader)
 - PostCSS plugins:
   - [cssgrace](https://github.com/cssdream/cssgrace) - Adds IE hacks, missing properties, repairs common errors, etc.
   - [cssnext](https://github.com/cssnext/cssnext) - Adds variables, custom selectors, custom media queries, automatic vendor prefixes, inline @import rules, etc.

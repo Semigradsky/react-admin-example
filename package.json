@@ -47,6 +47,7 @@
     "grunt-contrib-copy": "^0.8.0",
     "grunt-open": "^0.2.3",
     "grunt-webpack": "^1.0.8",
+    "json-loader": "^0.5.2",
     "json-schema-faker": "^0.1.10",
     "load-grunt-tasks": "^3.1.0",
     "postcss": "^4.1.8",

@@ -41,7 +41,8 @@ module.exports = {
       'mixins': 'src/scripts/mixins',
       'services': 'src/scripts/services',
       'utils': 'src/scripts/utils',
-      'ie': 'component-ie'
+      'ie': 'component-ie',
+      'config.json': 'src/config.dev.json'
     }
   },
 
@@ -52,6 +53,7 @@ module.exports = {
     loaders: [
       { test: /\.js$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.json$/, loader: 'json-loader' },
       { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
       { test: /\.(ttf|eot|svg)/, loader: 'file-loader' },

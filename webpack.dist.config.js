@@ -44,28 +44,20 @@ module.exports = {
       'components': 'src/scripts/components/',
       'mixins': 'src/scripts/mixins',
       'services': 'src/scripts/services',
-      'utils': 'src/scripts/utils'
+      'utils': 'src/scripts/utils',
+      'config.json': 'src/config.json'
     }
   },
 
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader'
-    }, {
-      test: /\.css$/,
-      loader: 'style-loader!css-loader!postcss-loader'
-    }, {
-      test: /\.(png|jpg)$/,
-      loader: 'url-loader?limit=8192'
-    }, {
-      test: /\.(ttf|eot|svg)/,
-      loader: 'file-loader'
-    }, {
-      test: /\.woff(2)?/,
-      loader: 'url-loader?limit=10000&minetype=application/font-woff'
-    }]
+    loaders: [
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.json$/, loader: 'json-loader' },
+      { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
+      { test: /\.(ttf|eot|svg)/, loader: 'file-loader' },
+      { test: /\.woff(2)?/, loader: 'url-loader?limit=10000&minetype=application/font-woff' }
+    ]
   },
 
   postcss: [
