@@ -6,17 +6,18 @@ require('bootstrap/dist/css/bootstrap.css');
 require('styles/main.css');
 require('font-awesome/css/font-awesome.css');
 
-const React = require('react');
-const Router = require('react-router');
-const { Route, DefaultRoute } = Router;
+import React from 'react';
+import Router from 'react-router';
+const { Route, DefaultRoute, NotFoundRoute } = Router;
 
-const App = require('components/App');
-const Logout = require('components/auth/Logout');
-const Login = require('components/auth/Login');
-const About = require('components/About');
-const Dashboard = require('components/Dashboard');
-const Users = require('components/users/List');
-const UserEdit = require('components/users/Edit');
+import App from 'components/App';
+import Logout from 'components/auth/Logout';
+import Login from 'components/auth/Login';
+import About from 'components/static/About';
+import Dashboard from 'components/Dashboard';
+import Users from 'components/users/List';
+import UserEdit from 'components/users/Edit';
+import NotFound from 'components/static/NotFound';
 
 const content = document.getElementsByTagName('body')[0];
 
@@ -28,6 +29,7 @@ const Routes = (
     <Route name="about" handler={About}/>
     <Route name="users" handler={Users}/>
     <Route name="editUser" path="users/:userId" handler={UserEdit}/>
+    <NotFoundRoute handler={NotFound} />
   </Route>
 );
 
