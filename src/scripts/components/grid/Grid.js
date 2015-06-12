@@ -5,7 +5,7 @@ import Griddle from 'griddle-react';
 
 require('./grid.css');
 
-class Grid extends React.Component {
+const Grid = React.createClass({
   render() {
     return (
       <Griddle
@@ -17,6 +17,6 @@ class Grid extends React.Component {
       />
     );
   }
-}
+});
 
 export default Grid;

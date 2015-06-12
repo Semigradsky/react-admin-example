@@ -7,7 +7,7 @@ import Sidebar from 'components/navbar/Sidebar';
 
 require('./navbar.css');
 
-class Navbar extends React.Component {
+const Navbar = React.createClass({
   render() {
     var header = this.props.auth ?
         <div className="navbar-header">
@@ -34,6 +34,6 @@ class Navbar extends React.Component {
       </nav>
     );
   }
-}
+});
 
 export default Navbar;

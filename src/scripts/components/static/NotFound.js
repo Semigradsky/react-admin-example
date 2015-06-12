@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-class NotFound extends React.Component {
+const NotFound = React.createClass({
   render() {
     return (
       <div>
@@ -15,6 +15,6 @@ class NotFound extends React.Component {
       </div>
     );
   }
-}
+});
 
 export default NotFound;

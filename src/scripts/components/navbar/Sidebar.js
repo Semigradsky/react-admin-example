@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-class Sidebar extends React.Component {
+const Sidebar = React.createClass({
   render() {
     return (
       <div className="sidebar" role="navigation">
@@ -18,6 +18,6 @@ class Sidebar extends React.Component {
       </div>
     );
   }
-}
+});
 
 export default Sidebar;

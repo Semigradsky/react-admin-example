@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 require('./footer.css');
 
-class PageFooter extends React.Component {
+const PageFooter = React.createClass({
   render() {
     return (
       <footer className="page-footer">
@@ -14,6 +14,6 @@ class PageFooter extends React.Component {
       </footer>
     );
   }
-}
+});
 
 export default PageFooter;
