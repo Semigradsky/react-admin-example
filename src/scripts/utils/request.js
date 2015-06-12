@@ -9,7 +9,11 @@ const request = (type, url, data, fn) => {
     type = 'del';
   }
 
-  let agent = superagent[type](config.apiUrl + '/' + url).use(noCache);
+  let agent = superagent[type](config.apiUrl + '/' + url);
+
+  if (config.clientNoCache) {
+    agent = agent.use(noCache);
+  }
 
   if (typeof data === 'object') {
     agent = agent.send(data);

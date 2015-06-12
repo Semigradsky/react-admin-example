@@ -1,3 +1,4 @@
 {
-  "apiUrl": "http://react-admin-example.herokuapp.com"
+  "apiUrl": "http://react-admin-example.herokuapp.com",
+  "clientNoCache": false
 }
