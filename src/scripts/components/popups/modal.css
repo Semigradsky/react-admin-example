@@ -1,0 +1,18 @@
+@import '--selectors.css';
+
+:--modal {
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 1000;
+}
+
+:--modal-content {
+  max-height: 90%;
+  margin: 30px auto 0;
+  border: 1px solid #CCC;
+  background: #FFF;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
