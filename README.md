@@ -20,6 +20,7 @@ Type `grunt serve` for start developing.
 - [json-server](https://github.com/typicode/json-server) - a full fake REST API with zero coding
 - [pikaday](https://github.com/dbushell/Pikaday) - A refreshing JavaScript Datepicker — lightweight, no dependencies, modular CSS
 - react
+- [react-modal](https://github.com/rackt/react-modal) - Accessible React Modal Dialog Component.
 - [react-router](https://github.com/rackt/react-router) - A complete routing solution for React.js
 - [superagent](https://github.com/visionmedia/superagent) - Ajax with less suck
   - [superagent-no-cache](https://github.com/johntron/superagent-no-cache) - Adds headers to all requests that prevents caching.
