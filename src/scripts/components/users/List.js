@@ -6,7 +6,7 @@ import users from 'services/users';
 import Authentication from 'mixins/Authentication';
 import Grid from 'components/grid/Grid';
 import DateDisplay from 'components/grid/DateDisplay';
-import EditingDisplay from 'components/grid/EditingDisplay';
+import UserEditingDisplay from 'components/users/EditingDisplay';
 import Loading from 'components/Loading';
 
 require('./users.css');
@@ -16,7 +16,7 @@ const metadata = [
   { columnName: 'login', displayName: 'Login' },
   { columnName: 'email', displayName: 'E-mail' },
   { columnName: 'birthday', displayName: 'Birthday', customComponent: DateDisplay, cssClassName: 'birthday' },
-  { columnName: 'options', displayName: '', customComponent: EditingDisplay, cssClassName: 'options' }
+  { columnName: 'options', displayName: '', customComponent: UserEditingDisplay, cssClassName: 'options' }
 ];
 
 const UserList = React.createClass({

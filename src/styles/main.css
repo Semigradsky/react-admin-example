@@ -1,5 +1,4 @@
 @import '--variables.css';
-@import '--media.css';
 
 html, body {
   height: 100%;
@@ -18,6 +17,7 @@ a {
 
   &:focus, &:hover {
     color: var(--linkHoverColor);
+    text-decoration: none;
   }
 
   &:active, &:hover {

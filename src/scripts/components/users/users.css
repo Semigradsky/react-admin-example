@@ -1,3 +1,5 @@
+@import '--selectors.css';
+
 .users-list {
   max-width: 900px;
 
@@ -10,10 +12,29 @@
   }
 
   th.options {
-    width: 30px;
+    width: 60px;
   }
 
   td.options {
     text-align: center;
+
+    .link {
+      opacity: 0;
+
+    }
+
+    .remove {
+      color: #9B3D3D;
+      padding-left: 5px;
+    }
   }
+
+  tr:hover .link {
+    opacity: 1;
+    transition: opacity 1s;
+  };
+}
+
+:--modal-content.users {
+  width: 400px;
 }
