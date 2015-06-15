@@ -28,7 +28,7 @@ const Routes = (
     <Route name="logout" handler={Logout}/>
     <Route name="about" handler={About}/>
     <Route name="users" handler={Users}/>
-    <Route name="editUser" path="users/:userId" handler={UserEdit}/>
+    <Route name="editUser" path="users/:userId?" handler={UserEdit}/>
     <NotFoundRoute handler={NotFound} />
   </Route>
 );

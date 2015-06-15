@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import { Link } from 'react-router';
 
 import users from 'services/users';
 import Authentication from 'mixins/Authentication';
@@ -43,7 +44,9 @@ const UserList = React.createClass({
   render() {
     return (
       <div>
-        <h1>Users</h1>
+        <h1>Users
+          <Link to="editUser" className="fa fa-plus create-user-link" />
+        </h1>
         <Loading progress={!this.state.dataLoaded}>
           <Grid
             results={this.state.users}

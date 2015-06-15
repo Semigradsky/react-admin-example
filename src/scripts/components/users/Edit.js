@@ -24,6 +24,11 @@ const UserEdit = React.createClass({
 
   componentDidMount() {
     const userId = this.props.params.userId;
+    if (!userId) {
+      this.setState({ dataLoaded: true, user: {} });
+      return;
+    }
+
     users.get(userId, (data) => {
       if (this.isMounted()) {
         this.setState({ dataLoaded: true, user: data });

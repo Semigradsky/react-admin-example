@@ -35,6 +35,12 @@
   };
 }
 
+.create-user-link {
+  padding-left: 10px;
+  vertical-align: middle;
+  font-size: 0.7em;
+}
+
 :--modal-content.users {
   width: 400px;
 }
