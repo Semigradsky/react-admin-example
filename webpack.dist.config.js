@@ -10,6 +10,7 @@ var webpack = require('webpack');
 var cssnext = require('cssnext');
 var cssgrace = require('cssgrace');
 var nested = require('postcss-nested');
+var patch = require('path');
 
 module.exports = {
 
@@ -36,16 +37,18 @@ module.exports = {
   ],
 
   resolve: {
-    root: __dirname,
+    root: patch.join(__dirname, 'src'),
     extensions: ['', '.js'],
     alias: {
-      'styles': 'src/styles',
-      'images': 'src/images',
-      'components': 'src/scripts/components/',
-      'mixins': 'src/scripts/mixins',
-      'services': 'src/scripts/services',
-      'utils': 'src/scripts/utils',
-      'config.json': 'src/config.json'
+      'actions': 'scripts/actions',
+      'constants': 'scripts/constants',
+      'components': 'scripts/components/',
+      'mixins': 'scripts/mixins',
+      'services': 'scripts/services',
+      'stores': 'scripts/stores',
+      'utils': 'scripts/utils',
+      'Dispatcher': 'scripts/dispatcher/Dispatcher.js',
+      'config.json': 'config.json'
     }
   },
 
