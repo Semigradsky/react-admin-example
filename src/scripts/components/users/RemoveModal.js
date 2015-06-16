@@ -3,13 +3,12 @@
 import React from 'react';
 import FRC from 'formsy-react-components';
 
-import users from 'services/users';
+import UserActions from 'actions/UserActions';
 
 const UserRemoveModal = React.createClass({
   removeUser(e) {
     e && e.preventDefault();
-    users.remove(this.props.id, () => {
-      // ToDo: update user list
+    UserActions.remove(this.props.id, () => {
       this.props.close();
     });
   },
