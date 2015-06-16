@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import users from 'services/users';
+import UserStore from 'stores/UserStore';
 import Authentication from 'mixins/Authentication';
 import Grid from 'components/grid/Grid';
 import DateDisplay from 'components/grid/DateDisplay';
@@ -23,6 +23,15 @@ const metadata = [
 const UserList = React.createClass({
   mixins: [ Authentication ],
 
+  update() {
+    UserStore.getAll((data) => {
+      this.setState({
+        dataLoaded: true,
+        users: data
+      });
+    });
+  },
+
   getInitialState() {
     return {
       dataLoaded: false,
@@ -31,14 +40,12 @@ const UserList = React.createClass({
   },
 
   componentDidMount() {
-    users.getAll((data) => {
-      if (this.isMounted()) {
-        this.setState({
-          dataLoaded: true,
-          users: data
-        });
-      }
-    });
+    this.update();
+    UserStore.addChangeListener(this.update);
+  },
+
+  componentWillUnmount() {
+    UserStore.removeChangeListener(this.update);
   },
 
   render() {

@@ -4,7 +4,8 @@ import React from 'react';
 import Formsy from 'formsy-react';
 import FRC from 'formsy-react-components';
 
-import users from 'services/users';
+import UserActions from 'actions/UserActions';
+import UserStore from 'stores/UserStore';
 import Authentication from 'mixins/Authentication';
 import Loading from 'components/Loading';
 import Datepicker from 'components/inputs/Datepicker';
@@ -29,7 +30,7 @@ const UserEdit = React.createClass({
       return;
     }
 
-    users.get(userId, (data) => {
+    UserStore.get(userId, (data) => {
       if (this.isMounted()) {
         this.setState({ dataLoaded: true, user: data });
       }
@@ -37,16 +38,22 @@ const UserEdit = React.createClass({
   },
 
   handleSubmit(data) {
-    const userId = this.props.params.userId;
+    const id = this.props.params.userId;
     this.setState({ dataSaved: false });
 
-    users.save(userId, data, (err, savedData) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      this.setState({ dataSaved: true, user: savedData });
-    });
+    if (id) {
+      UserActions.update(id, data, this.onSave);
+    } else {
+      UserActions.create(data, this.onSave);
+    }
+  },
+
+  onSave(err, data) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    this.setState({ dataSaved: true, user: data });
   },
 
   resetForm() {
