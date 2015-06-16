@@ -15,6 +15,7 @@ Type `grunt serve` for start developing.
 - [bootstrap](https://github.com/twbs/bootstrap)
 - [console-polyfill](https://github.com/paulmillr/console-polyfill) - Browser console methods polyfill
 - [fecha](https://github.com/taylorhakes/fecha) - Date formatting and parsing
+- [flux](https://github.com/facebook/flux) - Application Architecture for Building User Interfaces
 - [font-awesome](https://github.com/FortAwesome/Font-Awesome) - The iconic font and CSS toolkit
 - [griddle-react](https://github.com/GriddleGriddle/Griddle) - Simple Grid Component written in React
 - [json-server](https://github.com/typicode/json-server) - a full fake REST API with zero coding
