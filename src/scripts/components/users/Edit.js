@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import Router from 'react-router';
+import { Navigation } from 'react-router';
 import Formsy from 'formsy-react';
 import FRC from 'formsy-react-components';
 
@@ -14,7 +14,7 @@ import Datepicker from 'components/inputs/Datepicker';
 require('./users.css');
 
 const UserEdit = React.createClass({
-  mixins: [ Authentication, Router.Navigation ],
+  mixins: [ Authentication, Navigation ],
 
   getInitialState() {
     return {
@@ -44,10 +44,10 @@ const UserEdit = React.createClass({
 
     if (id) {
       UserActions.update(id, data, this.onSave);
-      this.transitionTo('users');
     } else {
       UserActions.create(data, this.onSave);
     }
+    this.transitionTo('users');
   },
 
   onSave(err, data) {
