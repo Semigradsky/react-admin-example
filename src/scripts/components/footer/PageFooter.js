@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-require('./footer.css');
+import './footer.css';
 
 const PageFooter = React.createClass({
   render() {

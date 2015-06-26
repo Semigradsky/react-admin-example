@@ -11,7 +11,7 @@ const Dashboard = React.createClass({
   mixins: [ Authentication ],
 
   render() {
-    var token = auth.getToken();
+    const token = auth.getToken();
     return (
       <div>
         <h1>Dashboard</h1>

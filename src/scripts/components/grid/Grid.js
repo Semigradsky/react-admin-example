@@ -3,7 +3,7 @@
 import React from 'react';
 import Griddle from 'griddle-react';
 
-require('./grid.css');
+import './grid.css';
 
 const Grid = React.createClass({
   render() {

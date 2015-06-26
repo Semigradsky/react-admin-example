@@ -11,7 +11,7 @@ import Authentication from 'mixins/Authentication';
 import Loading from 'components/Loading';
 import Datepicker from 'components/inputs/Datepicker';
 
-require('./users.css');
+import './users.css';
 
 const UserEdit = React.createClass({
   mixins: [ Authentication, Navigation ],

@@ -1,10 +1,10 @@
 'use strict';
 
-require('console-polyfill');
+import 'console-polyfill';
 
-require('bootstrap/dist/css/bootstrap.css');
-require('styles/main.css');
-require('font-awesome/css/font-awesome.css');
+import 'bootstrap/dist/css/bootstrap.css';
+import 'styles/main.css';
+import 'font-awesome/css/font-awesome.css';
 
 import React from 'react';
 import Router from 'react-router';

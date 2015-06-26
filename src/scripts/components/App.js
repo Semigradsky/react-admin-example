@@ -18,9 +18,7 @@ const App = React.createClass({
   },
 
   setStateOnAuth(loggedIn) {
-    this.setState({
-      loggedIn: loggedIn
-    });
+    this.setState({ loggedIn });
     !loggedIn && this.transitionTo('login');
   },
 

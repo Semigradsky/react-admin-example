@@ -6,8 +6,8 @@ import Pikaday from 'pikaday';
 import Formsy from 'formsy-react';
 import FRC from 'formsy-react-components';
 
-require('pikaday/css/pikaday.css');
-require('./datepicker.css');
+import 'pikaday/css/pikaday.css';
+import './datepicker.css';
 
 const Datepicker = React.createClass({
   mixins: [Formsy.Mixin],

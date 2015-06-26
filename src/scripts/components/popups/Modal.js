@@ -3,7 +3,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-require('./modal.css');
+import './modal.css';
 
 const appElement = document.getElementsByTagName('body')[0];
 Modal.setAppElement(appElement);

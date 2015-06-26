@@ -9,12 +9,12 @@ require('./navbar.css');
 
 const Navbar = React.createClass({
   render() {
-    var header = this.props.auth ?
+    const header = this.props.auth ?
         <div className="navbar-header">
           Admin Panel
         </div> : '';
 
-    var links = this.props.auth ? (
+    const links = this.props.auth ? (
           <Link to="logout" className="fa fa-sign-out fa-lg">
             <span className="link-text">Log out</span>
           </Link>

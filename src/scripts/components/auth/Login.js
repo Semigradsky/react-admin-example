@@ -7,7 +7,7 @@ import FRC from 'formsy-react-components';
 
 import auth from 'services/auth';
 
-require('./login.css');
+import './login.css';
 
 const Login = React.createClass({
   mixins: [ Router.Navigation ],
