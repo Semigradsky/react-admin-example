@@ -26,12 +26,21 @@
     "react"
   ],
   "rules": {
-    "quotes": [2, "single", "avoid-escape"],
-    "no-unused-expressions": 0,
+    // Best Practices
+    "default-case": 2,
     "no-new": 0,
+    "no-unused-expressions": 0,
+    "radix": 2,
+    // Stylistic Issues
+    "quotes": [2, "single", "avoid-escape"],
+    // ECMAScript 6
+    "constructor-super": 2,
+    "generator-star-spacing": [2, "after"],
+    "no-this-before-super": 2,
     "no-var": 2,
     "object-shorthand": 2,
     "prefer-const": 2,
+    // React rules
     "react/jsx-boolean-value": 2,
     "react/jsx-quotes": [2, "double", "avoid-escape"],
     "react/jsx-no-undef": 1,
