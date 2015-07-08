@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Navigation, RouteHandler } from 'react-router';
+import Helmet from 'react-helmet';
 
 import Navbar from 'components/navbar/Navbar';
 import PageFooter from 'components/footer/PageFooter';
@@ -32,6 +33,11 @@ const App = React.createClass({
 
     return (
       <div id="content">
+        <Helmet title="React Admin Example"
+                meta={[
+                        {'name': 'description', 'content': 'React Admin Example application'}
+                      ]}
+        />
         <Navbar auth={authState} />
         <div id="page-content" className={authState ? 'auth' : ''}>
           <RouteHandler />
