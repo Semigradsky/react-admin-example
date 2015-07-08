@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 import Sidebar from 'components/navbar/Sidebar';
 
-require('./navbar.css');
+import './navbar.css';
 
 const Navbar = React.createClass({
   render() {

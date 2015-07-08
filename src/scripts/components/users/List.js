@@ -10,7 +10,7 @@ import DateDisplay from 'components/grid/DateDisplay';
 import UserEditingDisplay from 'components/users/EditingDisplay';
 import Loading from 'components/Loading';
 
-require('./users.css');
+import './users.css';
 
 const metadata = [
   { columnName: 'name', displayName: 'Name' },

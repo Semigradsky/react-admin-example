@@ -69,10 +69,10 @@ module.exports = {
     cssnext({
       browsers: ['last 1 version', '> 2%'],
       import: {
-        root: 'scripts/styles'
+        root: 'styles'
       }
-    }),
-    cssgrace
+    })
+    // cssgrace // Wait fix https://github.com/cssdream/cssgrace/issues/29
   ],
 
   plugins: [
