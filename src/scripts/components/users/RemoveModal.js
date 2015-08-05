@@ -1,12 +1,10 @@
-'use strict';
-
 import React from 'react';
 import FRC from 'formsy-react-components';
 
 import UserActions from 'actions/UserActions';
 
 const UserRemoveModal = React.createClass({
-  removeUser(e) {
+  onSubmit(e) {
     e && e.preventDefault();
     UserActions.remove(this.props.id, () => {
       this.props.close();
@@ -15,7 +13,7 @@ const UserRemoveModal = React.createClass({
 
   render() {
     return (
-      <form className="form-horizontal form" onSubmit={this.removeUser}>
+      <form className="form-horizontal form" onSubmit={this.onSubmit}>
         <h1>Remove {this.props.login}</h1>
         <p>Are you sure?</p>
         <FRC.Row layout="horizontal">

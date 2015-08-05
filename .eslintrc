@@ -1,51 +1,21 @@
 {
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "binaryLiterals": true,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": true,
-    "destructuring": true,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "octalLiterals": true,
-    "restParams": true,
-    "spread": true,
-    "superInFunctions": true,
-    "templateStrings": true,
-    "jsx": true
-  },
-  "env": {
-   "browser": true,
-    "node": true,
-    "es6": true
-  },
-  "plugins": [
-    "react"
-  ],
+  "extends": ["eslint:recommended", "airbnb"],
   "rules": {
     // Best Practices
-    "default-case": 2,
     "no-new": 0,
-    "no-unused-expressions": 0,
-    "radix": 2,
-    // Stylistic Issues
-    "quotes": [2, "single", "avoid-escape"],
+    // Possible Errors
+    "comma-dangle": [2, "never"],
+    // Style
+    "indent": [2, 2, {"SwitchCase": 1}],
     // ECMAScript 6
     "constructor-super": 2,
     "generator-star-spacing": [2, "after"],
     "no-this-before-super": 2,
-    "no-var": 2,
     "object-shorthand": 2,
-    "prefer-const": 2,
     // React rules
-    "react/jsx-boolean-value": 2,
     "react/jsx-quotes": [2, "double", "avoid-escape"],
-    "react/jsx-no-undef": 1,
-    "react/no-multi-comp": 1,
-    "react/self-closing-comp": 1,
-    "react/wrap-multilines": 1
+    "react/prop-types": 0,
+    "react/sort-comp": 0,
+    "react/no-did-mount-set-state": 0
   }
 }

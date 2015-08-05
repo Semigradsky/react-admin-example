@@ -1,5 +1,3 @@
-'use strict';
-
 import { EventEmitter } from 'events';
 import faker from 'faker';
 import assign from 'react/lib/Object.assign';

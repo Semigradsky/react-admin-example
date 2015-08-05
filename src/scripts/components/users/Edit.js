@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { Navigation } from 'react-router';
 import Formsy from 'formsy-react';
@@ -38,7 +36,7 @@ const UserEdit = React.createClass({
     });
   },
 
-  handleSubmit(data) {
+  onSubmit(data) {
     const id = this.props.params.userId;
     this.setState({ dataSaved: false });
 
@@ -52,7 +50,7 @@ const UserEdit = React.createClass({
 
   onSave(err, data) {
     if (err) {
-      console.error(err);
+      console.log(err);
       return;
     }
     this.setState({ dataSaved: true, user: data });
@@ -63,13 +61,14 @@ const UserEdit = React.createClass({
   },
 
   render() {
+    const userId = this.props.params.userId;
     const user = this.state.user;
 
     return (
       <div>
-        <h1>Edit User</h1>
+        <h1>{userId ? 'Edit' : 'Create'} User</h1>
         <Loading progress={!this.state.dataLoaded}>
-          <Formsy.Form onValidSubmit={this.handleSubmit} className="form-horizontal form edit-user-form">
+          <Formsy.Form onValidSubmit={this.onSubmit} className="form-horizontal form edit-user-form">
             <FRC.Input type="text" name="login" label="Login" value={user.login} required />
             <FRC.Input type="email" name="email" label="Email" value={user.email} required validations="isEmail" />
             <FRC.Input type="text" name="name" label="Name" value={user.name} />

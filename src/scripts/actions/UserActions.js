@@ -1,5 +1,3 @@
-'use strict';
-
 import Dispatcher from 'Dispatcher';
 import UserConstants from 'constants/UserConstants';
 

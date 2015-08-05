@@ -1,15 +1,15 @@
-'use strict';
-
 import superagent from 'superagent';
 import noCache from 'superagent-no-cache';
 import config from 'config.json';
 
-const request = (type, url, data, fn) => {
-  if (type === 'delete') {
-    type = 'del';
-  }
+function getRequester(type) {
+  return type === 'delete' ? superagent.del : superagent[type];
+}
 
-  let agent = superagent[type](config.apiUrl + '/' + url);
+function request(type, url, data, fn) {
+  const requester = getRequester(type);
+
+  let agent = requester(config.apiUrl + '/' + url);
 
   if (config.clientNoCache) {
     agent = agent.use(noCache);
@@ -20,6 +20,6 @@ const request = (type, url, data, fn) => {
   }
 
   agent.end(fn || data);
-};
+}
 
 export default request;

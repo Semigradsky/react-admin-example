@@ -1,7 +1,5 @@
 // Fake authentication lib
 
-'use strict';
-
 const pretendRequest = (email, pass, cb) => {
   setTimeout(() => {
     if (email === 'joe@example.com' && pass === 'password1') {
@@ -17,8 +15,6 @@ const pretendRequest = (email, pass, cb) => {
 
 const auth = {
   login(email, pass, cb) {
-    cb = arguments[arguments.length - 1];
-
     if (localStorage.token) {
       cb && cb(true);
       this.onChange(true);

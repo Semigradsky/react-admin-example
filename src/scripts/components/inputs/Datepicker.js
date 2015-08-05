@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import fecha from 'fecha';
 import Pikaday from 'pikaday';
@@ -18,16 +16,14 @@ const Datepicker = React.createClass({
   },
 
   componentDidMount() {
-
     new Pikaday({
-     field: React.findDOMNode(this.refs.input),
-     onSelect: (date) => {
-      date = new Date(date - date.getTimezoneOffset() * 60 * 1000);
-      this.setValue(date.toISOString());
-      this.setState({ shownValue: this.format(date) });
-     }
+      field: React.findDOMNode(this.refs.input),
+      onSelect(date) {
+        const isoDate = new Date(date - date.getTimezoneOffset() * 60 * 1000).toISOString();
+        this.setValue(isoDate);
+        this.setState({ shownValue: this.format(isoDate) });
+      }
     });
-
   },
 
   format(date) {

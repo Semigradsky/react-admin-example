@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import Router from 'react-router';
 import Formsy from 'formsy-react';
@@ -22,7 +20,7 @@ const Login = React.createClass({
     };
   },
 
-  handleSubmit(data) {
+  onSubmit(data) {
     auth.login(data.email, data.pass, (loggedIn) => {
       if (!loggedIn) {
         return this.setState({ error: true });
@@ -41,7 +39,7 @@ const Login = React.createClass({
   render() {
     const errors = this.state.error ? <p>Bad login information</p> : '';
     return (
-      <Formsy.Form onSubmit={this.handleSubmit} className="form-horizontal form login-form">
+      <Formsy.Form onSubmit={this.onSubmit} className="form-horizontal form login-form">
         <FRC.Input name="email" label="Email" placeholder="email" value="joe@example.com" />
         <FRC.Input name="pass" label="Password" type="password" placeholder="password" help="(hint: password1)" />
         <FRC.Row layout="horizontal">

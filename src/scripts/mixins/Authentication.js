@@ -1,5 +1,3 @@
-'use strict';
-
 import auth from 'services/auth';
 import Login from 'components/auth/Login';
 

@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { Navigation, RouteHandler } from 'react-router';
 import Helmet from 'react-helmet';
@@ -18,26 +16,28 @@ const App = React.createClass({
     };
   },
 
-  setStateOnAuth(loggedIn) {
+  componentWillMount() {
+    auth.onChange = this.onAuthChange;
+    auth.login();
+  },
+
+  onAuthChange(loggedIn) {
     this.setState({ loggedIn });
     !loggedIn && this.transitionTo('login');
   },
 
-  componentWillMount() {
-    auth.onChange = this.setStateOnAuth;
-    auth.login();
-  },
-
   render() {
     const authState = this.state.loggedIn;
+    const meta = [
+      {
+        'name': 'description',
+        'content': 'React Admin Example application'
+      }
+    ];
 
     return (
       <div id="content">
-        <Helmet title="React Admin Example"
-                meta={[
-                        {'name': 'description', 'content': 'React Admin Example application'}
-                      ]}
-        />
+        <Helmet title="React Admin Example" meta={meta} />
         <Navbar auth={authState} />
         <div id="page-content" className={authState ? 'auth' : ''}>
           <RouteHandler />
