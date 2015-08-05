@@ -23,8 +23,8 @@ module.exports = {
   debug: true,
   devtool: 'source-map',
   entry: [
-      'webpack/hot/only-dev-server',
-      './src/scripts/main.js'
+    'webpack/hot/only-dev-server',
+    './src/scripts/main.js'
   ],
 
   stats: {
@@ -36,14 +36,10 @@ module.exports = {
     root: patch.join(__dirname, 'src'),
     extensions: ['', '.js'],
     alias: {
-      'actions': 'scripts/actions',
-      'constants': 'scripts/constants',
       'components': 'scripts/components/',
       'mixins': 'scripts/mixins',
       'services': 'scripts/services',
-      'stores': 'scripts/stores',
       'utils': 'scripts/utils',
-      'Dispatcher': 'scripts/dispatcher/Dispatcher.js',
       'ie': 'component-ie',
       'config.json': 'config.dev.json'
     }
@@ -51,16 +47,15 @@ module.exports = {
 
   module: {
     preLoaders: [
-      {test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/}
+      {test: /\.js$/, loader: 'eslint', exclude: /node_modules/}
     ],
     loaders: [
       { test: /\.js$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
-      { test: /\.(ttf|eot|svg)/, loader: 'file-loader' },
-      { test: /\.woff(2)?/, loader: 'url-loader?limit=10000&minetype=application/font-woff' }
+      { test: /\.json$/, loader: 'json' },
+      { test: /\.css$/, loader: 'style!css!postcss' },
+      { test: /\.(png|jpg)$/, loader: 'url?limit=8192' },
+      { test: /\.(ttf|eot|svg)/, loader: 'file' },
+      { test: /\.woff(2)?/, loader: 'url?limit=10000&minetype=application/font-woff' }
     ]
   },
 

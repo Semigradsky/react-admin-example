@@ -1,7 +1,7 @@
 import React from 'react';
 import FRC from 'formsy-react-components';
 
-import UserActions from 'actions/UserActions';
+import UserActions from 'components/users/Actions';
 
 const UserRemoveModal = React.createClass({
   onSubmit(e) {

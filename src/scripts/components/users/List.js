@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import UserStore from 'stores/UserStore';
+import UserStore from 'components/users/Store';
 import Authentication from 'mixins/Authentication';
 import Grid from 'components/grid/Grid';
 import DateDisplay from 'components/grid/DateDisplay';

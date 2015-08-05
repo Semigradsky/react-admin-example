@@ -40,14 +40,10 @@ module.exports = {
     root: patch.join(__dirname, 'src'),
     extensions: ['', '.js'],
     alias: {
-      'actions': 'scripts/actions',
-      'constants': 'scripts/constants',
       'components': 'scripts/components/',
       'mixins': 'scripts/mixins',
       'services': 'scripts/services',
-      'stores': 'scripts/stores',
       'utils': 'scripts/utils',
-      'Dispatcher': 'scripts/dispatcher/Dispatcher.js',
       'config.json': 'config.json'
     }
   },

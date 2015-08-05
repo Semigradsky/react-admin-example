@@ -3,8 +3,8 @@ import { Navigation } from 'react-router';
 import Formsy from 'formsy-react';
 import FRC from 'formsy-react-components';
 
-import UserActions from 'actions/UserActions';
-import UserStore from 'stores/UserStore';
+import UserActions from 'components/users/Actions';
+import UserStore from 'components/users/Store';
 import Authentication from 'mixins/Authentication';
 import Loading from 'components/Loading';
 import Datepicker from 'components/inputs/Datepicker';

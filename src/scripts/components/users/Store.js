@@ -3,8 +3,8 @@ import faker from 'faker';
 import assign from 'react/lib/Object.assign';
 
 import request from 'utils/request';
-import Dispatcher from 'Dispatcher';
-import UserConstants from 'constants/UserConstants';
+import Dispatcher from 'utils/Dispatcher';
+import UserConstants from 'components/users/Constants';
 
 const CHANGE_EVENT = 'change';
 

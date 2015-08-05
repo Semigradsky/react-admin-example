@@ -16,12 +16,15 @@ const Datepicker = React.createClass({
   },
 
   componentDidMount() {
+    const value = this.getValue();
     new Pikaday({
       field: React.findDOMNode(this.refs.input),
-      onSelect(date) {
-        const isoDate = new Date(date - date.getTimezoneOffset() * 60 * 1000).toISOString();
-        this.setValue(isoDate);
-        this.setState({ shownValue: this.format(isoDate) });
+      defaultDate: value ? new Date(value) : new Date(),
+      setDefaultDate: true,
+      onSelect: (date) => {
+        const resettedDate = new Date(date - date.getTimezoneOffset() * 60 * 1000);
+        this.setValue(resettedDate.toISOString());
+        this.setState({ shownValue: this.format(resettedDate) });
       }
     });
   },

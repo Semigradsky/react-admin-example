@@ -1,5 +1,5 @@
-import Dispatcher from 'Dispatcher';
-import UserConstants from 'constants/UserConstants';
+import Dispatcher from 'utils/Dispatcher';
+import UserConstants from 'components/users/Constants';
 
 const UserActions = {
   create(data, callback) {
